@@ -1,0 +1,14 @@
+{
+  "figure": "fig6",
+  "run_id": "qwen25vl7b_a100_l40s_pd_vllm_r0",
+  "kind": "imported-vllm-campaign",
+  "command": "python3 scripts/preprocess/ingest_vllm_exp.py",
+  "source": "artifacts/validation/vllm_graphs/extra_fig6_rows.csv#qwen25vl7b/pd",
+  "payload": {
+    "id": "qwen25vl7b_a100_l40s_pd_vllm_r0",
+    "model_label": "qwen25vl7b",
+    "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+    "policy": "pd",
+    "pair_label": "a100_l40s"
+  }
+}

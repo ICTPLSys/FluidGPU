@@ -1,0 +1,7 @@
+{
+  "model_label": "sd35_medium",
+  "kernel_samples": 64,
+  "cdf_at_ratio_1": 0.7031,
+  "e2e_time_ratio_pct": 53.2,
+  "ratios_file": "artifacts/validation/kernel_census/ratios/sd35_medium.txt"
+}

@@ -1,0 +1,19 @@
+row,e2e_tok_s,steady_tok_s,paper,date,protocol,notes
+homo_l40s,760.9,,890,2026-07-17,offline 192req ms32,cal4 probe
+homo_a100,1293.0,,1290,2026-07-17,offline 192req ms32,cal4 probe; calibration anchor +0.23%
+af,881.1,,2240,2026-07-17,offline 192req ms32,af+pingpong
+lever_a,1306.6,,,2026-07-17,offline 192req ms32,af+phase-aware+pingpong+FULL graph
+balanced_f035,1360.5,,,2026-07-17,offline 192req ms32,BALANCED=1 LOCAL_FFN_FRAC=0.35
+pd_stock_inf,1385.1,,2060,2026-07-17,bench serve 256req rate=inf,
+pd_stock_c64,1449.6,,2060,2026-07-17,bench serve 256req max-conc 64,
+pd_steady_sameclient,1501,1548,2060,2026-07-17,rdma_driver frac=1.0 via proxy conc64,
+fg_decoupled_r1,1498,1550,2520,2026-07-17,rdma_driver conc64 no proxy,P=L40S:8100 D=A100:8200 Mooncake
+fg_decoupled_r2,1487,1546,2520,2026-07-17,rdma_driver conc64 no proxy,repeat
+hybrid_phi017,1766,1723,,2026-07-17,rdma_driver conc64 --local-url P,
+hybrid_phi022,1818,2049,2520,2026-07-17,rdma_driver conc64 --local-url P,PEAK; FG row
+hybrid_phi028,1791,2001,,2026-07-17,rdma_driver conc64 --local-url P,
+hybrid_phi033,1668,1703,,2026-07-17,rdma_driver conc64 --local-url P,
+dual_homo_phi0370,1875,,,2026-07-17,2 drivers frac=1.0 conc32/32 n=161/95,routing baseline; no disaggregation
+serve_single_a100,1289,1288,1288,2026-07-22,reqdist_driver single replica 128req conc32,A100 replica alone under the Request Dist. client (same prompt stream)
+serve_single_l40s,759,744,894,2026-07-22,reqdist_driver single replica 128req conc32,L40S replica alone under the Request Dist. client
+reqdist_lo,2015,2284,1855,2026-07-22,reqdist_driver least-outstanding 256req conc64 (2x ms32 replicas),Request Dist. row; best of LO/round-robin/static = 2015/1511/1509 (dynamic routing beats the 1875 tuned static split of dual_homo_phi0370); 98% of 1289+759; EXCEEDS measured FG 1818 by 10.8%; fig6 bar is the FG-anchored rescale

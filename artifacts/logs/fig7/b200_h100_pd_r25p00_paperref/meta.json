@@ -1,0 +1,13 @@
+{
+  "figure": "fig7",
+  "run_id": "b200_h100_pd_r25p00_paperref",
+  "kind": "imported-paper-reference",
+  "command": "python3 scripts/preprocess/ingest_paper_reference_figs.py",
+  "source": "FluidGPU SC26 paper",
+  "payload": {
+    "policy": "pd",
+    "rps": 25.0,
+    "model": "openai/gpt-oss-20b",
+    "pair_label": "b200_h100"
+  }
+}

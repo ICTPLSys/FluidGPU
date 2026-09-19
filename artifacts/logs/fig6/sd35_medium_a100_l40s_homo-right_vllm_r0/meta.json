@@ -1,0 +1,14 @@
+{
+  "figure": "fig6",
+  "run_id": "sd35_medium_a100_l40s_homo-right_vllm_r0",
+  "kind": "imported-vllm-campaign",
+  "command": "python3 scripts/preprocess/ingest_vllm_exp.py",
+  "source": "artifacts/validation/vllm_graphs/extra_fig6_rows.csv#sd35_medium/homo-right",
+  "payload": {
+    "id": "sd35_medium_a100_l40s_homo-right_vllm_r0",
+    "model_label": "sd35_medium",
+    "model": "stabilityai/stable-diffusion-3.5-medium",
+    "policy": "homo-right",
+    "pair_label": "a100_l40s"
+  }
+}

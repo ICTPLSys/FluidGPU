@@ -1,0 +1,21 @@
+{
+  "kernels": 100,
+  "gpus": 3,
+  "mode": "throughput",
+  "variables": 1209,
+  "constraints": 706,
+  "objective_constant": 188.0,
+  "build_ms": 5.364516,
+  "solver": "gurobi",
+  "gurobi_status": "OPTIMAL",
+  "solver_ms": 117.353073,
+  "objective_us": 15295.455511819297,
+  "prefill_us": 2496.5384823081695,
+  "decode_us": 199.98307858611136,
+  "rank_switches": 99,
+  "rank_counts": {
+    "0": 34,
+    "1": 33,
+    "2": 33
+  }
+}

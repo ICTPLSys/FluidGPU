@@ -1,0 +1,11 @@
+{
+ "placement": "af",
+ "hop": "copy",
+ "exec_mode": "pingpong-eager",
+ "requests": 192,
+ "elapsed_s": 72.25217042898294,
+ "input_tokens": 909913,
+ "output_tokens": 73127,
+ "output_tok_s": 1012.108004033968,
+ "total_tok_s": 13605.681243392342
+}

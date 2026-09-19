@@ -1,0 +1,7 @@
+{
+  "model_label": "qwen25vl7b",
+  "kernel_samples": 1267713,
+  "cdf_at_ratio_1": 0.7032,
+  "e2e_time_ratio_pct": 34.3,
+  "ratios_file": "artifacts/validation/kernel_census/ratios/qwen25vl7b.txt"
+}

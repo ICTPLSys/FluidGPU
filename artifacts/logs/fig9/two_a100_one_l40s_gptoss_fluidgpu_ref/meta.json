@@ -1,0 +1,12 @@
+{
+  "figure": "fig9",
+  "run_id": "two_a100_one_l40s_gptoss_fluidgpu_ref",
+  "kind": "imported-paper-reference",
+  "command": "python3 scripts/preprocess/ingest_paper_reference_figs.py",
+  "source": "artifacts/validation/vllm_graphs/fig9_3card/results.csv#fg3_formA_phi035",
+  "payload": {
+    "cluster_label": "two_a100_one_l40s_gptoss",
+    "policy": "fluidgpu",
+    "model": "openai/gpt-oss-20b"
+  }
+}

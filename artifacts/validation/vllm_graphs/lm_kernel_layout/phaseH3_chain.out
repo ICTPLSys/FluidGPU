@@ -1,0 +1,11 @@
+######## H3 dual-homo pair up : 06:07:32 ########
+H3 ready (12x3s)
+######## H3 dual-homo phi=0.367 conc32/32 (A100 n=162 | L40S n=94) : 06:08:05 ########
+combined_wall=128.6s  combined_e2e=2038
+=== decoupled engine (Mooncake RDMA, NO proxy): 162/162 ok ===
+wall=128.2s  e2e=1294 out_tok/s  steady=1769 out_tok/s
+=== decoupled engine (Mooncake RDMA, NO proxy): 94/94 ok ===
+wall=118.7s  e2e=811 out_tok/s  steady=611 out_tok/s
+/tmp/fluidgpu-scratchpad/lm_kernel_layout/phaseH3.sh: line 15: 3505596 Killed                  CUDA_VISIBLE_DEVICES=1 $VB serve "$LLAMA" --port 8300 --tensor-parallel-size 1 --max_num_batched_tokens 16384 --max-num-seqs 32 --no-enable-prefix-caching > "$O/h3_a100_serve.log" 2>&1
+/tmp/fluidgpu-scratchpad/lm_kernel_layout/phaseH3.sh: line 15: 3505597 Killed                  CUDA_VISIBLE_DEVICES=2 $VB serve "$LLAMA" --port 8400 --tensor-parallel-size 1 --max_num_batched_tokens 16384 --max-num-seqs 32 --no-enable-prefix-caching > "$O/h3_l40s_serve.log" 2>&1
+PHASE_H3_DONE

@@ -1,0 +1,12 @@
+{
+  "figure": "fig12a",
+  "run_id": "a100_l40s_200gbps_online_ref",
+  "kind": "imported-paper-reference",
+  "command": "python3 scripts/preprocess/ingest_paper_reference_figs.py",
+  "source": "FluidGPU SC26 paper",
+  "payload": {
+    "bandwidth_gbps": 200,
+    "mode": "online",
+    "model": "openai/gpt-oss-20b"
+  }
+}

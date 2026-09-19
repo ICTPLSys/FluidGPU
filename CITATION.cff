@@ -1,0 +1,43 @@
+cff-version: 1.2.0
+message: >-
+  If you use this artifact, please cite both the software (this CITATION.cff)
+  and the accompanying research paper (see `preferred-citation` below).
+title: "FluidGPU: Fine-Grained Kernel Disaggregation for Large Model Inference on Heterogeneous GPUs"
+abstract: >-
+  FluidGPU is a fine-grained kernel disaggregation system for large-model
+  inference on heterogeneous GPUs. It combines a PTX-level kernel analyzer
+  for inter-kernel dependency extraction, workload-aware scheduling policies
+  (throughput-oriented MILP and latency-oriented), pipelined disaggregated
+  execution with priority-aware stream scheduling, and a lightweight online
+  monitor for dynamic policy adaptation. This repository is the artifact
+  accompanying the FluidGPU paper submitted to SC26.
+type: software
+authors:
+  - name: "FluidGPU Authors (Anonymous for double-blind review)"
+license: MIT
+repository-code: "https://doi.org/10.5281/zenodo.19710819"
+url: "https://doi.org/10.5281/zenodo.19710819"
+keywords:
+  - GPU disaggregation
+  - heterogeneous GPUs
+  - LLM inference
+  - kernel scheduling
+  - PTX analysis
+  - MILP
+  - pipelined execution
+  - vLLM
+  - PyTorch
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.19710819"
+    description: "Zenodo concept DOI; always resolves to the latest version"
+preferred-citation:
+  type: conference-paper
+  title: "FluidGPU: Fine-Grained Kernel Disaggregation for Large Model Inference on Heterogeneous GPUs"
+  authors:
+    - name: "FluidGPU Authors (Anonymous for double-blind review)"
+  year: 2026
+  conference:
+    name: "The International Conference for High Performance Computing, Networking, Storage, and Analysis (SC26)"
+  publisher:
+    name: "ACM/IEEE"

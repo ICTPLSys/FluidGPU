@@ -1,0 +1,11 @@
+{
+ "placement": "none",
+ "hop": "copy",
+ "exec_mode": "piecewise-cudagraph",
+ "requests": 192,
+ "elapsed_s": 152.05805748095736,
+ "input_tokens": 368832,
+ "output_tokens": 196608,
+ "output_tok_s": 1292.9798213726474,
+ "total_tok_s": 3718.5796620531705
+}

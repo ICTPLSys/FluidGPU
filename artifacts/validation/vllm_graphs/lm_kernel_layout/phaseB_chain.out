@@ -1,0 +1,10 @@
+######## b_homo_trace : 04:07:49 ########
+rc=0  tput=1426.2796644779394
+######## b_leverA_trace : 04:09:04 ########
+rc=0  tput=1314.8838717620608
+steps=2058
+FLUIDSTAGE ffn_ms=5521.2 ffn_tokens=3053632 ffn_tok_s=553070.8 hop_in_ms=1084.8 hop_in_GBs=23.06
+######## b_af_trace : 04:10:23 ########
+rc=0  tput=935.0667783806117
+FLUIDSTAGE ffn_ms=5672.3 ffn_tokens=3053632 ffn_tok_s=538344.2 hop_in_ms=1084.4 hop_in_GBs=23.07
+PHASE_B_DONE

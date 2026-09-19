@@ -1,0 +1,25 @@
+figure: fig12b
+title: MILP solver scalability
+artifact_root: artifacts/logs
+runs:
+  - id: milp_gpus2_grid
+    id_template: kernels{kernels}_gpus2
+    kind: milp_planner
+    gpus: 2
+    command_template: python3 fluidgpu_runtime/examples/fluidgpu_torch/milp_planner_probe.py --kernels {kernels} --gpus 2 --mode throughput --seed 0 --summary-json artifacts/logs/fig12b/kernels{kernels}_gpus2/summary.json --solve-exact
+    matrix:
+      kernels: [100, 200, 500, 1000, 1500]
+  - id: milp_gpus3_grid
+    id_template: kernels{kernels}_gpus3
+    kind: milp_planner
+    gpus: 3
+    command_template: python3 fluidgpu_runtime/examples/fluidgpu_torch/milp_planner_probe.py --kernels {kernels} --gpus 3 --mode throughput --seed 0 --summary-json artifacts/logs/fig12b/kernels{kernels}_gpus3/summary.json --solve-exact
+    matrix:
+      kernels: [100, 200, 500, 1000, 1500]
+  - id: milp_gpus4_grid
+    id_template: kernels{kernels}_gpus4
+    kind: milp_planner
+    gpus: 4
+    command_template: python3 fluidgpu_runtime/examples/fluidgpu_torch/milp_planner_probe.py --kernels {kernels} --gpus 4 --mode throughput --seed 0 --summary-json artifacts/logs/fig12b/kernels{kernels}_gpus4/summary.json --solve-exact
+    matrix:
+      kernels: [100, 200, 500, 1000, 1500]

@@ -1,0 +1,25 @@
+{
+ "source": "FluidGPU SC26 paper",
+ "unit": "ms",
+ "note": "the paper's grid starts at 50 kernels; this artifact's sweep starts at 100, so the 50-kernel column is the paper's throughout",
+ "solver_ms": {
+  "2": {
+   "50": 11,
+   "500": 182,
+   "1000": 432
+  },
+  "3": {
+   "50": 55,
+   "200": 210,
+   "500": 967,
+   "1000": 3080
+  },
+  "4": {
+   "50": 548,
+   "100": 758,
+   "200": 1336,
+   "500": 16726,
+   "1000": 113370
+  }
+ }
+}

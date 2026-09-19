@@ -1,0 +1,11 @@
+{
+ "placement": "af",
+ "hop": "copy",
+ "exec_mode": "eager",
+ "requests": 8,
+ "elapsed_s": 4.10508349299198,
+ "input_tokens": 18562,
+ "output_tokens": 940,
+ "output_tok_s": 228.9843803675923,
+ "total_tok_s": 4750.695091413601
+}

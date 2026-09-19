@@ -1,0 +1,14 @@
+{
+  "figure": "fig6",
+  "run_id": "qwen25vl7b_b200_h100_fluidgpu_paperref",
+  "kind": "imported-paper-reference",
+  "command": "python3 scripts/preprocess/ingest_paper_reference_figs.py",
+  "source": "FluidGPU SC26 paper",
+  "payload": {
+    "id": "qwen25vl7b_b200_h100_fluidgpu_paperref",
+    "model_label": "qwen25vl7b",
+    "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+    "policy": "fluidgpu",
+    "pair_label": "b200_h100"
+  }
+}

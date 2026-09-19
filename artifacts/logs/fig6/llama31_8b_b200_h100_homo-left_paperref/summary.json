@@ -1,0 +1,6 @@
+{
+  "status": "ok",
+  "throughput_tok_s": 5637.41,
+  "throughput_req_s": 5.505283203125,
+  "unit": "output tokens/s"
+}

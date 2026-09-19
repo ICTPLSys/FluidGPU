@@ -1,0 +1,13 @@
+  completed=32/256  A100:32/L40S:0
+  completed=64/256  A100:48/L40S:16
+  completed=96/256  A100:64/L40S:32
+  completed=128/256  A100:84/L40S:44
+  completed=160/256  A100:96/L40S:64
+  completed=192/256  A100:118/L40S:74
+  completed=224/256  A100:128/L40S:96
+  completed=256/256  A100:128/L40S:128
+
+=== request distribution (static): 256/256 ok ===
+    A100: assigned= 128 ok= 128 mean_lat=  19.8s  share=0.500  out_tok_s=  754.4
+    L40S: assigned= 128 ok= 128 mean_lat=  57.2s  share=0.500  out_tok_s=  754.4
+wall=173.7s  e2e=1509 out_tok/s  steady=1524 out_tok/s

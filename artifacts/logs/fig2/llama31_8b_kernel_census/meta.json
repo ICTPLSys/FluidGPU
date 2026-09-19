@@ -1,0 +1,15 @@
+{
+  "figure": "fig2",
+  "run_id": "llama31_8b_kernel_census",
+  "kind": "kernel-census",
+  "command": "python3 scripts/preprocess/ingest_kernel_census.py",
+  "payload": {
+    "model_label": "llama31_8b",
+    "model": "meta-llama/Llama-3.1-8B-Instruct",
+    "pair_label": "a100_l40s",
+    "requires_gpus": [
+      "A100",
+      "L40S"
+    ]
+  }
+}

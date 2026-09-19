@@ -1,0 +1,174 @@
+{
+  "status": "ok",
+  "tool": "ptx_memory_probe",
+  "input_ptx": "artifacts/validation/ptx_memory_probe/20260725T015942Z/original.ptx",
+  "instrumented_ptx": "artifacts/validation/ptx_memory_probe/20260725T015942Z/instrumented.ptx",
+  "access_csv": "artifacts/validation/ptx_memory_probe/20260725T015942Z/memory_accesses.csv",
+  "instrumentation": {
+    "inst_buffer_param": "fluidgpu_inst_buf",
+    "record_bytes": 16,
+    "access_count": 3,
+    "accesses": [
+      {
+        "access_id": 0,
+        "entry_name": "producer_kernel",
+        "line_number": 17,
+        "mnemonic": "st.global.f32",
+        "access_kind": "write",
+        "address_expr": "%rd1",
+        "width_bytes": 4,
+        "original_line": "st.global.f32 [%rd1], %f3;      // single global write"
+      },
+      {
+        "access_id": 1,
+        "entry_name": "consumer_kernel",
+        "line_number": 34,
+        "mnemonic": "ld.global.f32",
+        "access_kind": "read",
+        "address_expr": "%rd1",
+        "width_bytes": 4,
+        "original_line": "ld.global.f32 %f1, [%rd1];      // RAW read from producer's buffer"
+      },
+      {
+        "access_id": 2,
+        "entry_name": "consumer_kernel",
+        "line_number": 36,
+        "mnemonic": "st.global.f32",
+        "access_kind": "write",
+        "address_expr": "%rd2",
+        "width_bytes": 4,
+        "original_line": "st.global.f32 [%rd2], %f2;      // single global write"
+      }
+    ],
+    "inserted_atomics_per_access": 2
+  },
+  "ptx_features": {
+    "original": {
+      "entry_names": [
+        "producer_kernel",
+        "consumer_kernel"
+      ],
+      "instruction_counts": {
+        "add.f32": 1,
+        "ld.global.f32": 1,
+        "ld.param.u64": 3,
+        "mov.f32": 2,
+        "mul.f32": 1,
+        "ret": 2,
+        "st.global.f32": 2
+      },
+      "total_instructions": 12,
+      "tensor_core_instructions": 0,
+      "memory_instructions": 6,
+      "barrier_instructions": 0,
+      "shared_memory_refs": 0,
+      "register_count": 4
+    },
+    "instrumented": {
+      "entry_names": [
+        "producer_kernel",
+        "consumer_kernel"
+      ],
+      "instruction_counts": {
+        "add.f32": 1,
+        "add.u64": 6,
+        "atom.global.max.u64": 3,
+        "atom.global.min.u64": 3,
+        "ld.global.f32": 1,
+        "ld.param.u64": 5,
+        "mov.f32": 2,
+        "mov.u64": 3,
+        "mul.f32": 1,
+        "ret": 2,
+        "st.global.f32": 2
+      },
+      "total_instructions": 29,
+      "tensor_core_instructions": 0,
+      "memory_instructions": 8,
+      "barrier_instructions": 0,
+      "shared_memory_refs": 0,
+      "register_count": 4
+    }
+  },
+  "static_ranges": [
+    {
+      "access_id": 0,
+      "entry_name": "producer_kernel",
+      "kind": "write",
+      "buffer": "intermediate",
+      "param": "output",
+      "address_expr": "%rd1",
+      "width_bytes": 4,
+      "min_addr": 17592186044416,
+      "max_addr": 17592186044419
+    },
+    {
+      "access_id": 1,
+      "entry_name": "consumer_kernel",
+      "kind": "read",
+      "buffer": "intermediate",
+      "param": "input",
+      "address_expr": "%rd1",
+      "width_bytes": 4,
+      "min_addr": 17592186044416,
+      "max_addr": 17592186044419
+    },
+    {
+      "access_id": 2,
+      "entry_name": "consumer_kernel",
+      "kind": "write",
+      "buffer": "final",
+      "param": "output",
+      "address_expr": "%rd2",
+      "width_bytes": 4,
+      "min_addr": 35184372088832,
+      "max_addr": 35184372088835
+    }
+  ],
+  "raw_ddg": {
+    "edges": [
+      {
+        "src": "producer_kernel",
+        "dst": "consumer_kernel",
+        "buffer": "intermediate",
+        "write_access_id": 0,
+        "read_access_id": 1
+      }
+    ]
+  },
+  "execution": {
+    "status": "ok",
+    "range_count": 3,
+    "ranges": [
+      {
+        "access_id": 0,
+        "min_addr": 140512688340992,
+        "max_addr": 140512688340995,
+        "expected_min_addr": 140512688340992,
+        "expected_max_addr": 140512688340995,
+        "match": true
+      },
+      {
+        "access_id": 1,
+        "min_addr": 140512688340992,
+        "max_addr": 140512688340995,
+        "expected_min_addr": 140512688340992,
+        "expected_max_addr": 140512688340995,
+        "match": true
+      },
+      {
+        "access_id": 2,
+        "min_addr": 140512688341504,
+        "max_addr": 140512688341507,
+        "expected_min_addr": 140512688341504,
+        "expected_max_addr": 140512688341507,
+        "match": true
+      }
+    ]
+  },
+  "runtime_range_check": {
+    "status": "ok",
+    "matched": true,
+    "checked_accesses": 3
+  }
+}

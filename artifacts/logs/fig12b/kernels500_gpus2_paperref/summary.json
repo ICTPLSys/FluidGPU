@@ -1,0 +1,7 @@
+{
+  "status": "ok",
+  "kernels": 500,
+  "gpus": 2,
+  "solver": "gurobi",
+  "solver_ms": 182
+}

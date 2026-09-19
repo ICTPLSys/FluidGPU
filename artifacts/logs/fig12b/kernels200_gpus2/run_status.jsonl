@@ -1,0 +1,1 @@
+{"status": "ok", "command": "python3 fluidgpu_runtime/examples/fluidgpu_torch/milp_planner_probe.py --kernels 200 --gpus 2 --mode throughput --seed 0 --summary-json artifacts/logs/fig11b/kernels200_gpus2/summary.json --solve-exact", "returncode": 0, "elapsed_s": 0.247599885}

@@ -1,0 +1,11 @@
+{
+  "figure": "fig12b",
+  "run_id": "kernels50_gpus3_paperref",
+  "kind": "imported-paper-reference",
+  "command": "python3 scripts/preprocess/ingest_paper_reference_figs.py",
+  "source": "FluidGPU SC26 paper",
+  "payload": {
+    "kernels": 50,
+    "gpus": 3
+  }
+}

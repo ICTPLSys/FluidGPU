@@ -1,0 +1,5 @@
+{
+  "status": "ok",
+  "request_rate": 39.6,
+  "normalized_latency_ms_per_token": 29.87
+}

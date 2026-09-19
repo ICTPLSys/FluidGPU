@@ -1,0 +1,15 @@
+{
+  "figure": "fig7",
+  "run_id": "fluidgpu_r55p58_measured",
+  "kind": "imported-paper-reference",
+  "command": "python3 scripts/preprocess/ingest_paper_reference_figs.py",
+  "source": "artifacts/validation/vllm_graphs/fig7_gt_v2/ via scripts/preprocess/ingest_vllm_exp.py",
+  "payload": {
+    "policy": "fluidgpu",
+    "rps": 55.575,
+    "model": "openai/gpt-oss-20b",
+    "pair_label": "a100_l40s",
+    "gpu_a": "A100",
+    "gpu_b": "L40S"
+  }
+}

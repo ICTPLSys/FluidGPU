@@ -1,0 +1,8 @@
+{
+  "status": "ok",
+  "request_rate": 41.85,
+  "normalized_latency_ms_per_token": 56.12,
+  "paper_norm_latency_ms_per_token": 40.27,
+  "rate_scale_vs_paper": 0.0955,
+  "latency_scale_vs_paper": 1.3935
+}

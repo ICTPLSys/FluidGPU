@@ -1,0 +1,10 @@
+{
+  "grouping": "category",
+  "points": 52,
+  "l40s_faster_pct": {
+    "attention": 72.0,
+    "ffn": 29.6
+  },
+  "annotations": [],
+  "points_file": "artifacts/validation/kernel_census/fig3_block_points.tsv"
+}

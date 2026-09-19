@@ -1,0 +1,30 @@
+######## H1 pair up (P=L40S:8100 producer, D=A100:8200 consumer) : 05:55:41 ########
+H1 pair ready (12x3s)
+-- smoke: plain completion on the P engine (producer serving homo) --
+P_PLAIN_OK
+=== decoupled engine (Mooncake RDMA, NO proxy): 8/8 ok ===
+######## H1 hybrid phi=0.22 (256req 1536/1024 conc64) : 05:56:17 ########
+=== decoupled engine (Mooncake RDMA, NO proxy): 256/256 ok ===
+local-prefill-frac=0.22 -> 56/256 requests prefilled on the A100, 200 on the L40S
+wall=134.4s  e2e=1950 out_tok/s  steady=2155 out_tok/s
+######## H1 hybrid phi=0.28 (256req 1536/1024 conc64) : 05:58:32 ########
+=== decoupled engine (Mooncake RDMA, NO proxy): 256/256 ok ===
+local-prefill-frac=0.28 -> 71/256 requests prefilled on the A100, 185 on the L40S
+wall=135.4s  e2e=1937 out_tok/s  steady=2174 out_tok/s
+######## H1 hybrid phi=0.34 (256req 1536/1024 conc64) : 06:00:48 ########
+=== decoupled engine (Mooncake RDMA, NO proxy): 256/256 ok ===
+local-prefill-frac=0.34 -> 87/256 requests prefilled on the A100, 169 on the L40S
+wall=145.5s  e2e=1802 out_tok/s  steady=1892 out_tok/s
+/tmp/fluidgpu-scratchpad/lm_kernel_layout/phaseH.sh: line 22: 3488957 Killed                  MC_MS_AUTO_DISC=0 MOONCAKE_DEVICE=mlx5_5 VLLM_MOONCAKE_BOOTSTRAP_PORT=8998 CUDA_VISIBLE_DEVICES=2 $VB serve "$LLAMA" --port 8100 --tensor-parallel-size 1 --max_num_batched_tokens 16384 --max-num-seqs 32 --no-enable-prefix-caching --kv-transfer-config '{"kv_connector":"MooncakeConnector","kv_role":"kv_producer","kv_connector_extra_config":{"device_name":"mlx5_5"}}' > "$O/h_prefill.log" 2>&1
+/tmp/fluidgpu-scratchpad/lm_kernel_layout/phaseH.sh: line 22: 3488958 Killed                  MC_MS_AUTO_DISC=0 MOONCAKE_DEVICE=mlx5_2 CUDA_VISIBLE_DEVICES=1 $VB serve "$LLAMA" --port 8200 --tensor-parallel-size 1 --max_num_batched_tokens 16384 --max-num-seqs 32 --no-enable-prefix-caching --kv-transfer-config '{"kv_connector":"MooncakeConnector","kv_role":"kv_consumer","kv_connector_extra_config":{"device_name":"mlx5_2"}}' > "$O/h_decode.log" 2>&1
+######## H2 dual-homo pair up : 06:03:20 ########
+H2 ready (11x3s)
+######## H2 dual-homo phi=0.367 conc40/40 (A100 n=162 | L40S n=94) : 06:03:50 ########
+combined_wall=129.0s  combined_e2e=2032
+=== decoupled engine (Mooncake RDMA, NO proxy): 162/162 ok ===
+wall=128.6s  e2e=1290 out_tok/s  steady=1727 out_tok/s
+=== decoupled engine (Mooncake RDMA, NO proxy): 94/94 ok ===
+wall=119.0s  e2e=809 out_tok/s  steady=613 out_tok/s
+/tmp/fluidgpu-scratchpad/lm_kernel_layout/phaseH.sh: line 22: 3499693 Killed                  CUDA_VISIBLE_DEVICES=1 $VB serve "$LLAMA" --port 8300 --tensor-parallel-size 1 --max_num_batched_tokens 16384 --max-num-seqs 32 --no-enable-prefix-caching > "$O/h2_a100_serve.log" 2>&1
+/tmp/fluidgpu-scratchpad/lm_kernel_layout/phaseH.sh: line 22: 3499694 Killed                  CUDA_VISIBLE_DEVICES=2 $VB serve "$LLAMA" --port 8400 --tensor-parallel-size 1 --max_num_batched_tokens 16384 --max-num-seqs 32 --no-enable-prefix-caching > "$O/h2_l40s_serve.log" 2>&1
+PHASE_H_DONE

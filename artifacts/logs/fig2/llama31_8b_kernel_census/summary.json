@@ -1,0 +1,7 @@
+{
+  "model_label": "llama31_8b",
+  "kernel_samples": 354,
+  "cdf_at_ratio_1": 0.5876,
+  "e2e_time_ratio_pct": 26.3,
+  "ratios_file": "artifacts/validation/kernel_census/ratios/llama31_8b.txt"
+}

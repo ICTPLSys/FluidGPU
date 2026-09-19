@@ -1,0 +1,10 @@
+arm,repeat,output_tok_s,pipeline,priority_streams,date,notes
+pipe_off,1,887.8572893635384,off,0,2026-07-22,GT 4096/384 192req ms32 phase-aware+full-decode-graph
+pipe_naive,1,1140.621339116477,naive,0,2026-07-22,GT 4096/384 192req ms32 phase-aware+full-decode-graph
+pipe_priority,1,1119.673912118313,naive,1,2026-07-22,GT 4096/384 192req ms32 phase-aware+full-decode-graph
+pipe_off,2,887.1368103832206,off,0,2026-07-22,GT 4096/384 192req ms32 phase-aware+full-decode-graph
+pipe_naive,2,1138.4203562510015,naive,0,2026-07-22,GT 4096/384 192req ms32 phase-aware+full-decode-graph
+pipe_priority,2,1118.6138849296403,naive,1,2026-07-22,GT 4096/384 192req ms32 phase-aware+full-decode-graph
+pipe_off,3,887.3397547452668,off,0,2026-07-22,GT 4096/384 192req ms32 phase-aware+full-decode-graph
+pipe_naive,3,1138.2508592508327,naive,0,2026-07-22,GT 4096/384 192req ms32 phase-aware+full-decode-graph
+pipe_priority,3,1118.6554244145582,naive,1,2026-07-22,GT 4096/384 192req ms32 phase-aware+full-decode-graph

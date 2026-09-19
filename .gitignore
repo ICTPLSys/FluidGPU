@@ -1,0 +1,85 @@
+# ---- FluidGPU AD artifact ignores ----
+
+# Curated reproduction data IS tracked (figures, tables, the current fig
+# log records, and the validation campaigns that the shipped Fig.6-11
+# renderings are built from). Only the multi-GB raw measurement archives
+# stay on the AE machine; their paths are documented in docs/EXPERIMENTS.md.
+artifacts/logs/*archive*/
+artifacts/logs/*backup*/
+artifacts/baselines/
+# Default output root of the campaign rerun scripts (engine logs + raw driver
+# stdout). Curated extracts of what the shipped figures use are tracked, e.g.
+# artifacts/validation/vllm_graphs/reqdist/.
+artifacts/validation/vllm_graphs/reruns/
+
+# The paper itself is distributed by the conference, not redistributed here.
+# The values digitized from its figures ship as data in
+# artifacts/validation/paper_reference/*.json, which IS tracked, so the
+# reproduction path never needs the PDF.
+docs/*.pdf
+
+# C++/CUDA build outputs
+cpp_runtime/build/
+build/
+dist/
+
+# Large public datasets are fetched on demand (scripts/fetch_datasets.sh +
+# scripts/preprocess_datasets.sh). The DERIVED benchmark inputs (spliced /
+# paper-shape jsonls, conversation_benchmark) are tracked.
+datasets/splitwise/
+datasets/azure/
+datasets/coco/
+datasets/coco_512/
+datasets/parti-prompts/
+datasets/parti_prompts_1024/
+datasets/_outsweep/
+models/
+*.pt
+*.pth
+*.safetensors
+*.bin
+*.onnx
+
+# Python caches and build metadata
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+.eggs/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# IDE / editor
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS cruft
+.DS_Store
+Thumbs.db
+
+# Logs and tmp files
+*.log
+*.tmp
+*.tmp.*
+core
+core.*
+
+# Local secrets / env overrides (never commit)
+.env
+.env.*
+!.env.example
+/fluidgpu-ae.conf
+/reviewer_access/
+/scripts/admin/

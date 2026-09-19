@@ -1,0 +1,25 @@
+{
+ "source": "FluidGPU SC26 paper",
+ "units": {
+  "throughput": "output tokens/s",
+  "latency_ratio": "relative to the native link"
+ },
+ "throughput_tok_s": {
+  "200": 2641.0,
+  "100": 2610.0,
+  "50": 2550.0,
+  "25": 2490.0
+ },
+ "latency_ratio": {
+  "200": 1.0,
+  "100": 1.03,
+  "50": 1.08,
+  "25": 1.15
+ },
+ "homo_latency_ratio": 1.18,
+ "measured_anchor": {
+  "throughput_tok_s": 71.5,
+  "norm_latency_ms_per_token": 14.15,
+  "source": "artifacts/logs/fig12a_native_link_archive/ (226.4 ms / 16 tokens)"
+ }
+}

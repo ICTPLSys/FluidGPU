@@ -1,0 +1,24 @@
+{
+ "source": "FluidGPU SC26 paper",
+ "unit": "output tokens/s",
+ "bars": {
+  "off": 1443.0,
+  "naive": 2123.0,
+  "priority": 2641.0
+ },
+ "zero_comm_optimal": 2734.0,
+ "breakdown_pct_of_bottleneck_gpu_time": {
+  "off": {
+   "compute": 52.8,
+   "comm": 47.2
+  },
+  "priority": {
+   "compute": 96.7,
+   "comm": 3.3
+  }
+ },
+ "measured_anchor": {
+  "priority_tok_s": 97.6,
+  "source": "artifacts/logs/fig10_measured_20260720_archive/"
+ }
+}

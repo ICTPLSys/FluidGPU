@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fluidgpu-torch"
+version = "0.1.0"
+description = "FluidGPU two-rank LLM disaggregation runtime and probes"
+requires-python = ">=3.10"
+dependencies = [
+  "torch",
+  "transformers",
+  "PyYAML",
+  "matplotlib",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["fluidgpu_torch*"]

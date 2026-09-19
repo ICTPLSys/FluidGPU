@@ -1,0 +1,12 @@
+{
+  "status": "ok",
+  "throughput_tok_s": 1501.0,
+  "throughput_req_s": 1.4658203125,
+  "output_len": 1024,
+  "steady_tok_s": 1548.0,
+  "unit": "output tokens/s (e2e = ok x out_len / wall)",
+  "paper_value": 2060.0,
+  "protocol": "rdma_driver frac=1.0 via proxy conc64",
+  "workload": "calibrated 1920 in / 1024 out (runbook \u00a747)",
+  "source_row": "pd_steady_sameclient"
+}

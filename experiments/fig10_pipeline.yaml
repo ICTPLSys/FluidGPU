@@ -1,0 +1,22 @@
+figure: fig10
+title: Pipeline and priority scheduling breakdown
+artifact_root: artifacts/logs
+runs:
+  - id: a100_l40s_pipe_off
+    kind: command
+    pipeline: off
+    model: openai/gpt-oss-20b
+    requires_gpus: [A100, L40S]
+    command: bash scripts/run_fig10_pipeline_fluidgpu.sh --model openai/gpt-oss-20b --pipeline off --requests 100
+  - id: a100_l40s_pipe_naive
+    kind: command
+    pipeline: naive
+    model: openai/gpt-oss-20b
+    requires_gpus: [A100, L40S]
+    command: bash scripts/run_fig10_pipeline_fluidgpu.sh --model openai/gpt-oss-20b --pipeline naive --requests 100
+  - id: a100_l40s_pipe_priority
+    kind: command
+    pipeline: priority
+    model: openai/gpt-oss-20b
+    requires_gpus: [A100, L40S]
+    command: bash scripts/run_fig10_pipeline_fluidgpu.sh --model openai/gpt-oss-20b --pipeline priority --requests 100

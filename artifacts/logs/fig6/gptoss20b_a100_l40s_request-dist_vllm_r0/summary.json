@@ -1,0 +1,12 @@
+{
+  "status": "ok",
+  "throughput_tok_s": 2021.0,
+  "throughput_req_s": 2.9546783625730995,
+  "output_len": 684,
+  "steady_tok_s": 2019.0,
+  "unit": "output tokens/s (e2e = ok x out_len / wall)",
+  "paper_value": 2052.0,
+  "protocol": "reqdist_driver least-outstanding 256req conc64 (2x ms32 replicas)",
+  "workload": "random-token 4096 in / 684 out (2026-07-24 final mirror)",
+  "source_row": "reqdist_lo"
+}

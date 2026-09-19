@@ -1,0 +1,14 @@
+{
+  "figure": "fig6",
+  "run_id": "llama31_8b_h100_rtxpro6000_af_paperref",
+  "kind": "imported-paper-reference",
+  "command": "python3 scripts/preprocess/ingest_paper_reference_figs.py",
+  "source": "FluidGPU SC26 paper",
+  "payload": {
+    "id": "llama31_8b_h100_rtxpro6000_af_paperref",
+    "model_label": "llama31_8b",
+    "model": "meta-llama/Llama-3.1-8B-Instruct",
+    "policy": "af",
+    "pair_label": "h100_rtxpro6000"
+  }
+}

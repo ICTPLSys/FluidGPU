@@ -1,0 +1,31 @@
+######## e_pf_a100 : 05:03:53 ########
+rc=0  json={ "placement": "none", "hop": "copy", "exec_mode": "piecewise-cudagraph", "requests": 64, "elapsed_s": 11.504723754012957, "input_tokens": 163392, "output_tokens": 512, "output_tok_s": 44.50345883545526, "total_tok_s": 14246.669759700117}
+######## e_pf_l40s : 05:04:35 ########
+rc=0  json={ "placement": "none", "hop": "copy", "exec_mode": "piecewise-cudagraph", "requests": 64, "elapsed_s": 13.008102222927846, "input_tokens": 163392, "output_tokens": 512, "output_tok_s": 39.36008429404545, "total_tok_s": 12600.1469846313}
+######## dual-homo pair up : 05:05:18 ########
+dual-homo ready+complete (14x3s)
+######## dual-homo phi=0.367 (A100 n=162 conc=41 | L40S n=94 conc=23) : 05:05:58 ########
+combined_wall=165.8s  combined_e2e=1581
+=== decoupled engine (Mooncake RDMA, NO proxy): 162/162 ok ===
+wall=128.3s  e2e=1293 out_tok/s  steady=1733 out_tok/s
+=== decoupled engine (Mooncake RDMA, NO proxy): 94/94 ok ===
+wall=165.4s  e2e=582 out_tok/s  steady=452 out_tok/s
+######## dual-homo phi=0.30 (A100 n=179 conc=45 | L40S n=77 conc=19) : 05:08:44 ########
+combined_wall=156.6s  combined_e2e=1674
+=== decoupled engine (Mooncake RDMA, NO proxy): 179/179 ok ===
+wall=134.5s  e2e=1362 out_tok/s  steady=1319 out_tok/s
+=== decoupled engine (Mooncake RDMA, NO proxy): 77/77 ok ===
+wall=156.2s  e2e=505 out_tok/s  steady=581 out_tok/s
+######## dual-homo phi=0.44 (A100 n=143 conc=36 | L40S n=113 conc=28) : 05:11:20 ########
+combined_wall=174.7s  combined_e2e=1501
+=== decoupled engine (Mooncake RDMA, NO proxy): 143/143 ok ===
+wall=109.6s  e2e=1337 out_tok/s  steady=1562 out_tok/s
+=== decoupled engine (Mooncake RDMA, NO proxy): 113/113 ok ===
+wall=174.4s  e2e=664 out_tok/s  steady=754 out_tok/s
+/tmp/fluidgpu-scratchpad/lm_kernel_layout/phaseEF.sh: line 24: 3396508 Killed                  CUDA_VISIBLE_DEVICES=1 $VB serve "$LLAMA" --port 8300 --tensor-parallel-size 1 --max_num_batched_tokens 16384 --max-num-seqs 32 --no-enable-prefix-caching > "$O/f_a100_serve.log" 2>&1
+/tmp/fluidgpu-scratchpad/lm_kernel_layout/phaseEF.sh: line 24: 3396509 Killed                  CUDA_VISIBLE_DEVICES=2 $VB serve "$LLAMA" --port 8400 --tensor-parallel-size 1 --max_num_batched_tokens 16384 --max-num-seqs 32 --no-enable-prefix-caching > "$O/f_l40s_serve.log" 2>&1
+######## d_bal050 (n=192) : 05:14:27 ########
+rc=0  tput=1461.6424881397845
+######## d_bal065 (n=192) : 05:17:15 ########
+rc=0  tput=1435.5801404577865
+PHASE_EF_DONE

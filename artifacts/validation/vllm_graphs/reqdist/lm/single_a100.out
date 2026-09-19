@@ -1,0 +1,8 @@
+  completed=32/128  a100:32
+  completed=64/128  a100:64
+  completed=96/128  a100:96
+  completed=128/128  a100:128
+
+=== request distribution (round-robin): 128/128 ok ===
+    a100: assigned= 128 ok= 128 mean_lat=  25.4s  share=1.000  out_tok_s= 1288.6
+wall=101.7s  e2e=1289 out_tok/s  steady=1288 out_tok/s

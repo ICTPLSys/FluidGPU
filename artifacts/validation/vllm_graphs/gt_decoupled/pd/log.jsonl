@@ -1,0 +1,1 @@
+{"status": "ok", "model": "~/.cache/fluidgpu/models/openai--gpt-oss-20b", "request_rate": Infinity, "requests": 256, "generated_tokens": 98304, "elapsed_s": 55.28228927007876, "throughput_req_s": 4.630777838257118, "throughput_tok_s": 1778.2186898907332, "latency_ms_avg": null, "source": "vllm bench serve"}

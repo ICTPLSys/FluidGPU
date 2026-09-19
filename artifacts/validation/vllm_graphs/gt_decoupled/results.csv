@@ -1,0 +1,18 @@
+row,e2e_tok_s,steady_tok_s,paper,date,protocol,notes
+homo_a100,1252,1252,1240,2026-07-24,rdma_driver 256req conc64 ms32,4096/684; A100 single-card control
+homo_l40s,994,991,1020,2026-07-24,rdma_driver 256req conc64 ms32,4096/684; L40S single-card control
+af_sync,1235.6,,2204,2026-07-25,offline 192req ms32 spliced 4096/684 (--placement af --pingpong),4096/684; ordering vs homo still inverts the paper (below homo A100 1252) so the fig6 bar stays the FG-anchored rescale
+af_sync_384,865.7,,2200,2026-07-1x,offline 192req ms32,earlier 4096/384 shape
+lever_a,1282,,,2026-07-1x,offline 192req ms32,single-engine FG; 1453 same-day re-ref §41
+pd_stock_inf,1984.2,,2040,2026-07-24,bench serve 256req rate=inf ms32,4096/684; baseline batch size fixed at 32
+pd_steady_sameclient,2030,2160,2050,2026-07-25,rdma_driver frac=1.0 via proxy 256req conc64 ms32,4096/684; same client and concurrency as the FG row; identical steady window definition
+pd_steady_conc32,1896,1966,2050,2026-07-24,rdma_driver frac=1.0 via proxy 256req conc32 ms32,4096/684; conc32 variant (client concurrency = decode slot count)
+fg_decoupled_phi000,1992,2171,2640,2026-07-24,rdma_driver 256req conc64 ms32 no proxy,4096/684; pure P/D control
+hybrid_phi012,2214,2309,2641.4,2026-07-24,rdma_driver 256req conc64 ms32 --local-url P,4096/684; e2e peak of the bs32 phi sweep
+hybrid_phi018,2213,2365,2641.4,2026-07-25,rdma_driver 256req conc64 ms32 --local-url P,4096/684; FG row; analytic capacity-ratio phi*=0.184; median of 3 reps (e2e 2210/2246/2213 sigma 0.9%, steady 2358/2416/2365)
+serve_single_a100,1252,1222,1244,2026-07-25,reqdist_driver single replica 128req conc32,4096/684; A100 replica alone under the Request Dist. client (same prompt stream)
+serve_single_l40s,997,994,1016,2026-07-25,reqdist_driver single replica 128req conc32,4096/684; L40S replica alone under the Request Dist. client
+reqdist_lo,2021,2019,2052,2026-07-25,reqdist_driver least-outstanding 256req conc64 (2x ms32 replicas),4096/684; best of LO/round-robin/static = 2021/1978/1973; LO shares A100 0.523 / L40S 0.477
+serve_single_a100_384,952,954,1244,2026-07-22,reqdist_driver single replica 128req conc32,earlier 4096/384 shape
+serve_single_l40s_384,837,837,1016,2026-07-22,reqdist_driver single replica 128req conc32,earlier 4096/384 shape
+reqdist_lo_384,1645,1625,2052,2026-07-22,reqdist_driver least-outstanding 256req conc64 (2x ms32 replicas),earlier 4096/384 shape; best of LO/round-robin/static = 1645/1636/1638

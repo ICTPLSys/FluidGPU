@@ -1,0 +1,42 @@
+# FluidGPU artifact-evaluation environment.
+# Expected Python: 3.12.13
+#
+# PyTorch wheels are resolved through the extra index below. cu129 is what the
+# validated environment runs (torch 2.10.0+cu129); the CUDA 12.8 toolkit on the
+# host is only used for nvcc/ptxas, which the wheels do not depend on.
+--extra-index-url https://download.pytorch.org/whl/cu129
+
+# Core runtime constraints for AD artifact.
+torch==2.10.0
+vllm==0.18.0
+gurobipy==13.0.1
+
+# Hugging Face model loading and artifact download helpers.
+# transformers 4.56+ pairs with torch 2.10 (both the 'dtype=' kwarg migration
+# and tokenizer/config changes assumed by fluidgpu_torch live in this range).
+transformers>=4.56,<5.0
+huggingface-hub[cli]>=0.26,<1.0
+accelerate>=1.0,<2.0
+safetensors>=0.4.5
+sentencepiece>=0.2.0
+protobuf>=5.0
+
+# Orchestration, analysis, and plotting.
+PyYAML>=6.0
+matplotlib>=3.8
+numpy>=1.26
+pandas>=2.2
+
+# Dataset fetch helpers used by scripts/fetch_datasets.sh and AE preprocessing.
+datasets>=3.0
+pillow>=10.0
+requests>=2.31
+
+# Test runner for AD unit tests.
+pytest>=9.0
+
+# Diffusion workload (SD3.5 MMDiT profiling) and gpt-oss MXFP4 runtime kernels.
+# kernels must stay <0.11: 0.16+ requires huggingface-hub>=1.0, which
+# transformers <5.0 rejects. Do NOT let pip float huggingface-hub to 1.x.
+diffusers>=0.39,<1.0
+kernels>=0.10,<0.11

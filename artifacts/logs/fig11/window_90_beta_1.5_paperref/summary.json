@@ -1,0 +1,5 @@
+{
+  "status": "ok",
+  "norm_latency_ms_per_token": 17.4,
+  "policy_switch_count": 8
+}

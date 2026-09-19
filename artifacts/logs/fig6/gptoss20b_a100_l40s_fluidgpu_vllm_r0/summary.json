@@ -1,0 +1,12 @@
+{
+  "status": "ok",
+  "throughput_tok_s": 2213.0,
+  "throughput_req_s": 3.2353801169590644,
+  "output_len": 684,
+  "steady_tok_s": 2365.0,
+  "unit": "output tokens/s (e2e = ok x out_len / wall)",
+  "paper_value": 2641.4,
+  "protocol": "rdma_driver 256req conc64 ms32 --local-url P",
+  "workload": "random-token 4096 in / 684 out (2026-07-24 final mirror)",
+  "source_row": "hybrid_phi018"
+}

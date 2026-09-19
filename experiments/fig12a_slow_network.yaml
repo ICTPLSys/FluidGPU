@@ -1,0 +1,13 @@
+figure: fig12a
+title: Slow-network robustness
+artifact_root: artifacts/logs
+runs:
+  - id: slow_network_grid
+    id_template: a100_l40s_{bandwidth_gbps}gbps_{mode}
+    kind: command
+    model: openai/gpt-oss-20b
+    requires_gpus: [A100, L40S]
+    command_template: bash scripts/run_fig12a_slow_network_fluidgpu.sh --model openai/gpt-oss-20b --comm-bw-gbps {bandwidth_gbps} --mode {mode}
+    matrix:
+      bandwidth_gbps: [200, 100, 50, 25]
+      mode: [offline, online]

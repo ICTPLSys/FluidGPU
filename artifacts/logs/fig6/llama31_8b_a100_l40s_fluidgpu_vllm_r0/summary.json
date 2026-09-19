@@ -1,0 +1,12 @@
+{
+  "status": "ok",
+  "throughput_tok_s": 1818.0,
+  "throughput_req_s": 1.775390625,
+  "output_len": 1024,
+  "steady_tok_s": 2049.0,
+  "unit": "output tokens/s (e2e = ok x out_len / wall)",
+  "paper_value": 2520.0,
+  "protocol": "rdma_driver conc64 --local-url P",
+  "workload": "calibrated 1920 in / 1024 out (runbook \u00a747)",
+  "source_row": "hybrid_phi022"
+}

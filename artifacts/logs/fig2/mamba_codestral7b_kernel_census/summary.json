@@ -1,0 +1,7 @@
+{
+  "model_label": "mamba_codestral7b",
+  "kernel_samples": 272507,
+  "cdf_at_ratio_1": 0.6212,
+  "e2e_time_ratio_pct": 28.8,
+  "ratios_file": "artifacts/validation/kernel_census/ratios/mamba_codestral7b.txt"
+}

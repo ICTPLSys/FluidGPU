@@ -1,0 +1,15 @@
+{
+  "figure": "fig2",
+  "run_id": "qwen25vl7b_kernel_census",
+  "kind": "kernel-census",
+  "command": "python3 scripts/preprocess/ingest_kernel_census.py",
+  "payload": {
+    "model_label": "qwen25vl7b",
+    "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+    "pair_label": "a100_l40s",
+    "requires_gpus": [
+      "A100",
+      "L40S"
+    ]
+  }
+}

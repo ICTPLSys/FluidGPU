@@ -1,0 +1,12 @@
+{
+  "status": "ok",
+  "throughput_tok_s": 2030.0,
+  "throughput_req_s": 2.9678362573099415,
+  "output_len": 684,
+  "steady_tok_s": 2160.0,
+  "unit": "output tokens/s (e2e = ok x out_len / wall)",
+  "paper_value": 2050.0,
+  "protocol": "rdma_driver frac=1.0 via proxy 256req conc64 ms32",
+  "workload": "random-token 4096 in / 684 out (2026-07-24 final mirror)",
+  "source_row": "pd_steady_sameclient"
+}

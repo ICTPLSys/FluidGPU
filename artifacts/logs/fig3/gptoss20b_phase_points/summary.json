@@ -1,0 +1,70 @@
+{
+  "grouping": "phase",
+  "points": 52,
+  "l40s_faster_pct": {
+    "decode": 57.1,
+    "prefill": 45.2
+  },
+  "annotations": [
+    {
+      "label": "cublasGemv",
+      "kernel_a100": "ampere_gemm+cublasLt_splitKreduce",
+      "kernel_l40s": "std::enable_if<!T7, void>::type internal::gemvx::kernel<int, int, __nv",
+      "launches": 888,
+      "ratio_census_median": 1.6637,
+      "ratio": 1.7477,
+      "x_us": 22.454,
+      "y": 1.7477,
+      "other_positions": [
+        {
+          "name_a100": "ampere_bf16_s16816gemm_bf16_64x64_sliced1x2_ldg8_f2f_stages_64x6_tn",
+          "name_l40s": "std::enable_if<!T7, void>::type internal::gemvx::kernel<int, int, __nv",
+          "launches": 888,
+          "ratio_median": 1.746,
+          "plotted": 2.1998
+        },
+        {
+          "name_a100": "dot+reduce",
+          "name_l40s": "std::enable_if<!T7, void>::type internal::gemvx::kernel<int, int, __nv",
+          "launches": 888,
+          "ratio_median": 0.811,
+          "plotted": null
+        },
+        {
+          "name_a100": "ampere_bf16_s16816gemm_bf16_64x64_sliced1x2_ldg8_f2f_stages_64x5_tn",
+          "name_l40s": "std::enable_if<!T7, void>::type internal::gemvx::kernel<int, int, __nv",
+          "launches": 38,
+          "ratio_median": 2.3361,
+          "plotted": 2.5565
+        }
+      ]
+    },
+    {
+      "label": "FlashAttention",
+      "kernel_a100": "kernel_unified_attention_3d",
+      "kernel_l40s": "kernel_unified_attention_3d",
+      "launches": 888,
+      "ratio_census_median": 0.5829,
+      "ratio": 0.493,
+      "x_us": 18.361,
+      "y": 0.493,
+      "other_positions": [
+        {
+          "name_a100": "kernel_unified_attention_2d",
+          "name_l40s": "kernel_unified_attention_2d",
+          "launches": 192,
+          "ratio_median": 0.5639,
+          "plotted": 0.4042
+        },
+        {
+          "name_a100": "kernel_unified_attention_3d",
+          "name_l40s": "kernel_unified_attention_2d",
+          "launches": 24,
+          "ratio_median": 192.6731,
+          "plotted": 0.493
+        }
+      ]
+    }
+  ],
+  "points_file": "artifacts/validation/kernel_census/fig3_phase_points.tsv"
+}

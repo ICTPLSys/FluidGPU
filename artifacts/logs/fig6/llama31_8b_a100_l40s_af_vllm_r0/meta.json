@@ -1,0 +1,14 @@
+{
+  "figure": "fig6",
+  "run_id": "llama31_8b_a100_l40s_af_vllm_r0",
+  "kind": "imported-vllm-campaign",
+  "command": "python3 scripts/preprocess/ingest_vllm_exp.py",
+  "source": "artifacts/validation/vllm_graphs/extra_fig6_rows.csv#llama31_8b/af",
+  "payload": {
+    "id": "llama31_8b_a100_l40s_af_vllm_r0",
+    "model_label": "llama31_8b",
+    "model": "meta-llama/Llama-3.1-8B-Instruct",
+    "policy": "af",
+    "pair_label": "a100_l40s"
+  }
+}

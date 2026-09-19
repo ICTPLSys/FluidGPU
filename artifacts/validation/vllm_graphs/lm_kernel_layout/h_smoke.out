@@ -1,0 +1,6 @@
+prefiller engine_id=8f31fd94-729b-4e88-aad4-25fe66e4adac
+
+=== decoupled engine (Mooncake RDMA, NO proxy): 8/8 ok ===
+local-prefill-frac=0.25 -> 2/8 requests prefilled on the A100, 6 on the L40S
+wall=1.6s  e2e=80 out_tok/s  steady=161 out_tok/s
+vs stock PD (same RDMA, WITH proxy): e2e@256=1827, steady@768=1892 ; ceiling 2023

@@ -1,0 +1,36 @@
+prefiller engine_id=6b6afd54-b981-4953-bea2-a8a3e03dec74
+  completed=32/256
+Traceback (most recent call last):
+  File "/tmp/fluidgpu-scratchpad/rdma_driver.py", line 177, in <module>
+    asyncio.run(main())
+  File "~/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "~/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "~/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/tmp/fluidgpu-scratchpad/rdma_driver.py", line 156, in main
+    await asyncio.gather(*[guarded(i) for i in range(a.num_prompts)])
+  File "/tmp/fluidgpu-scratchpad/rdma_driver.py", line 151, in guarded
+    e = await one_request(sess, i, prompts[i], a.output_len, a.model, eid, done,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/fluidgpu-scratchpad/rdma_driver.py", line 84, in one_request
+    async with sess.post(P_URL, json=body, headers=hdr) as r:
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "~/.python/vllm0.18/lib/python3.12/site-packages/aiohttp/client.py", line 1510, in __aenter__
+    self._resp: _RetType = await self._coro
+                           ^^^^^^^^^^^^^^^^
+  File "~/.python/vllm0.18/lib/python3.12/site-packages/aiohttp/client.py", line 779, in _request
+    resp = await handler(req)
+           ^^^^^^^^^^^^^^^^^^
+  File "~/.python/vllm0.18/lib/python3.12/site-packages/aiohttp/client.py", line 757, in _connect_and_send_request
+    await resp.start(conn)
+  File "~/.python/vllm0.18/lib/python3.12/site-packages/aiohttp/client_reqrep.py", line 539, in start
+    message, payload = await protocol.read()  # type: ignore[union-attr]
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "~/.python/vllm0.18/lib/python3.12/site-packages/aiohttp/streams.py", line 703, in read
+    await self._waiter
+aiohttp.client_exceptions.ServerDisconnectedError: Server disconnected

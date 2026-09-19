@@ -1,0 +1,4 @@
+access_id,entry_name,line_number,mnemonic,access_kind,address_expr,width_bytes,original_line
+0,producer_kernel,17,st.global.f32,write,%rd1,4,"st.global.f32 [%rd1], %f3;      // single global write"
+1,consumer_kernel,34,ld.global.f32,read,%rd1,4,"ld.global.f32 %f1, [%rd1];      // RAW read from producer's buffer"
+2,consumer_kernel,36,st.global.f32,write,%rd2,4,"st.global.f32 [%rd2], %f2;      // single global write"

@@ -1,0 +1,14 @@
+{
+  "figure": "fig6",
+  "run_id": "mamba_codestral7b_h100_rtxpro6000_request-dist_paperref",
+  "kind": "imported-paper-reference",
+  "command": "python3 scripts/preprocess/ingest_paper_reference_figs.py",
+  "source": "FluidGPU SC26 paper",
+  "payload": {
+    "id": "mamba_codestral7b_h100_rtxpro6000_request-dist_paperref",
+    "model_label": "mamba_codestral7b",
+    "model": "mistralai/Mamba-Codestral-7B-v0.1",
+    "policy": "request-dist",
+    "pair_label": "h100_rtxpro6000"
+  }
+}

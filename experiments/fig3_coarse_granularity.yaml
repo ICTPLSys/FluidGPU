@@ -1,0 +1,9 @@
+figure: fig3
+title: Coarse task granularity hides attention/FFN heterogeneity
+artifact_root: artifacts/logs
+runs:
+  - id: gptoss_prefill_decode_scatter
+    kind: command
+    model: openai/gpt-oss-20b
+    requires_gpus: [A100, L40S]
+    command: python3 fluidgpu_runtime/examples/fluidgpu_torch/refine_llm_kernel_groups.py --input-profile fluidgpu_runtime/profiles/gpt_oss_20b_kernel_group_split.json --output-profile artifacts/logs/fig3/gptoss_prefill_decode_scatter/refined_profile.json

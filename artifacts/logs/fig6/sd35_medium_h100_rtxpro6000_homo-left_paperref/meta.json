@@ -1,0 +1,14 @@
+{
+  "figure": "fig6",
+  "run_id": "sd35_medium_h100_rtxpro6000_homo-left_paperref",
+  "kind": "imported-paper-reference",
+  "command": "python3 scripts/preprocess/ingest_paper_reference_figs.py",
+  "source": "FluidGPU SC26 paper",
+  "payload": {
+    "id": "sd35_medium_h100_rtxpro6000_homo-left_paperref",
+    "model_label": "sd35_medium",
+    "model": "stabilityai/stable-diffusion-3.5-medium",
+    "policy": "homo-left",
+    "pair_label": "h100_rtxpro6000"
+  }
+}

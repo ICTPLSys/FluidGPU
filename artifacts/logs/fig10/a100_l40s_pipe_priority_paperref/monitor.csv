@@ -1,0 +1,3 @@
+name,mode,elapsed_us,bytes
+paper_breakdown,compute,967,0
+paper_breakdown,comm,33,0

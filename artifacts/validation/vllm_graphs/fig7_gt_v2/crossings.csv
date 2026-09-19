@@ -1,0 +1,7 @@
+row,crossing_tpot50_req_s,crossing_paper_metric_req_s,rate2_tpot_ms,saturation_tok_s_rate12,notes
+fg_ubr,2.4,,,,negative control (ubatch gate 1024)
+af,4.5,4.3,32.1,877,
+fg_leverA,5.4,5.2,9.1,860,was 2.1 before detox
+homo_a100,6.2,6.1,7.8,933,
+homo_l40s,7.1,6.9,12.0,1091,
+pd,12,12,5.5,1368,TPOT flat 5.5-9.0 through rate 12

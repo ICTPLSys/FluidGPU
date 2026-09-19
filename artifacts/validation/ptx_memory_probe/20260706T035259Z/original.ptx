@@ -1,0 +1,36 @@
+.version 8.0
+.target sm_80
+.address_size 64
+
+// Opaque kernel #1: performs a short arithmetic body and emits one f32 store.
+.visible .entry producer_kernel(
+    .param .u64 output
+)
+{
+    .reg .f32 %f<4>;
+    .reg .b64 %rd<2>;
+    ld.param.u64 %rd1, [output];
+    mov.f32 %f1, 0f3f800000;        // 1.0
+    mov.f32 %f2, 0f40000000;        // 2.0
+    add.f32 %f3, %f1, %f2;          // 3.0
+    st.global.f32 [%rd1], %f3;      // single global write
+    ret;
+}
+
+// Opaque kernel #2: reads the producer's buffer (RAW edge) and writes a
+// transformed value. Two global accesses -> two (min,max) atomic pairs after
+// instrumentation.
+.visible .entry consumer_kernel(
+    .param .u64 input,
+    .param .u64 output
+)
+{
+    .reg .f32 %f<3>;
+    .reg .b64 %rd<3>;
+    ld.param.u64 %rd1, [input];
+    ld.param.u64 %rd2, [output];
+    ld.global.f32 %f1, [%rd1];      // RAW read from producer's buffer
+    mul.f32 %f2, %f1, 0f40000000;   // * 2.0
+    st.global.f32 [%rd2], %f2;      // single global write
+    ret;
+}

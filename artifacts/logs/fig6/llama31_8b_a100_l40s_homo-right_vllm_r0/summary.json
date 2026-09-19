@@ -1,0 +1,12 @@
+{
+  "status": "ok",
+  "throughput_tok_s": 760.9,
+  "throughput_req_s": 0.74306640625,
+  "output_len": 1024,
+  "steady_tok_s": null,
+  "unit": "output tokens/s (e2e = ok x out_len / wall)",
+  "paper_value": 890.0,
+  "protocol": "offline 192req ms32",
+  "workload": "calibrated 1920 in / 1024 out (runbook \u00a747)",
+  "source_row": "homo_l40s"
+}

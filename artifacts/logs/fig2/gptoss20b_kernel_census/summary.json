@@ -1,0 +1,7 @@
+{
+  "model_label": "gptoss20b",
+  "kernel_samples": 302909,
+  "cdf_at_ratio_1": 0.7505,
+  "e2e_time_ratio_pct": 38.07,
+  "ratios_file": "artifacts/validation/kernel_census/ratios/gptoss20b.txt"
+}

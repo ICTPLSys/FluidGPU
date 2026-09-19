@@ -1,0 +1,871 @@
+{
+  "model": "Qwen/Qwen2.5-1.5B",
+  "rank_count": 2,
+  "task_count": 142,
+  "hidden_size": 1536,
+  "num_kv_heads": 2,
+  "head_dim": 128,
+  "dtype": "bfloat16",
+  "max_seq_len": 2048,
+  "dense_fine_grained": {
+    "runtime_compatible": true,
+    "source_granularity": "qkv_sdpa_o_proj_mlp_gate_up_mlp_down_proj",
+    "attention_side_tensor_transport": "qkv_to_sdpa_to_o_proj",
+    "mlp_side_tensor_transport": "gate_up_to_down_proj",
+    "note": "dense attention and dense MLP internals are split; MoE experts remain unsplit"
+  },
+  "tasks": [
+    {
+      "task_id": 0,
+      "kernel_group_id": 0,
+      "name": "embed",
+      "rank": 0
+    },
+    {
+      "task_id": 1,
+      "kernel_group_id": 1,
+      "name": "layer_0_qkv",
+      "rank": 0
+    },
+    {
+      "task_id": 2,
+      "kernel_group_id": 2,
+      "name": "layer_0_sdpa",
+      "rank": 1
+    },
+    {
+      "task_id": 3,
+      "kernel_group_id": 3,
+      "name": "layer_0_o_proj",
+      "rank": 0
+    },
+    {
+      "task_id": 4,
+      "kernel_group_id": 4,
+      "name": "layer_0_mlp_gate_up",
+      "rank": 1
+    },
+    {
+      "task_id": 5,
+      "kernel_group_id": 5,
+      "name": "layer_0_mlp_down_proj",
+      "rank": 0
+    },
+    {
+      "task_id": 6,
+      "kernel_group_id": 6,
+      "name": "layer_1_qkv",
+      "rank": 0
+    },
+    {
+      "task_id": 7,
+      "kernel_group_id": 7,
+      "name": "layer_1_sdpa",
+      "rank": 1
+    },
+    {
+      "task_id": 8,
+      "kernel_group_id": 8,
+      "name": "layer_1_o_proj",
+      "rank": 0
+    },
+    {
+      "task_id": 9,
+      "kernel_group_id": 9,
+      "name": "layer_1_mlp_gate_up",
+      "rank": 1
+    },
+    {
+      "task_id": 10,
+      "kernel_group_id": 10,
+      "name": "layer_1_mlp_down_proj",
+      "rank": 0
+    },
+    {
+      "task_id": 11,
+      "kernel_group_id": 11,
+      "name": "layer_2_qkv",
+      "rank": 0
+    },
+    {
+      "task_id": 12,
+      "kernel_group_id": 12,
+      "name": "layer_2_sdpa",
+      "rank": 1
+    },
+    {
+      "task_id": 13,
+      "kernel_group_id": 13,
+      "name": "layer_2_o_proj",
+      "rank": 0
+    },
+    {
+      "task_id": 14,
+      "kernel_group_id": 14,
+      "name": "layer_2_mlp_gate_up",
+      "rank": 1
+    },
+    {
+      "task_id": 15,
+      "kernel_group_id": 15,
+      "name": "layer_2_mlp_down_proj",
+      "rank": 0
+    },
+    {
+      "task_id": 16,
+      "kernel_group_id": 16,
+      "name": "layer_3_qkv",
+      "rank": 0
+    },
+    {
+      "task_id": 17,
+      "kernel_group_id": 17,
+      "name": "layer_3_sdpa",
+      "rank": 1
+    },
+    {
+      "task_id": 18,
+      "kernel_group_id": 18,
+      "name": "layer_3_o_proj",
+      "rank": 0
+    },
+    {
+      "task_id": 19,
+      "kernel_group_id": 19,
+      "name": "layer_3_mlp_gate_up",
+      "rank": 1
+    },
+    {
+      "task_id": 20,
+      "kernel_group_id": 20,
+      "name": "layer_3_mlp_down_proj",
+      "rank": 0
+    },
+    {
+      "task_id": 21,
+      "kernel_group_id": 21,
+      "name": "layer_4_qkv",
+      "rank": 0
+    },
+    {
+      "task_id": 22,
+      "kernel_group_id": 22,
+      "name": "layer_4_sdpa",
+      "rank": 1
+    },
+    {
+      "task_id": 23,
+      "kernel_group_id": 23,
+      "name": "layer_4_o_proj",
+      "rank": 0
+    },
+    {
+      "task_id": 24,
+      "kernel_group_id": 24,
+      "name": "layer_4_mlp_gate_up",
+      "rank": 1
+    },
+    {
+      "task_id": 25,
+      "kernel_group_id": 25,
+      "name": "layer_4_mlp_down_proj",
+      "rank": 0
+    },
+    {
+      "task_id": 26,
+      "kernel_group_id": 26,
+      "name": "layer_5_qkv",
+      "rank": 0
+    },
+    {
+      "task_id": 27,
+      "kernel_group_id": 27,
+      "name": "layer_5_sdpa",
+      "rank": 1
+    },
+    {
+      "task_id": 28,
+      "kernel_group_id": 28,
+      "name": "layer_5_o_proj",
+      "rank": 0
+    },
+    {
+      "task_id": 29,
+      "kernel_group_id": 29,
+      "name": "layer_5_mlp_gate_up",
+      "rank": 1
+    },
+    {
+      "task_id": 30,
+      "kernel_group_id": 30,
+      "name": "layer_5_mlp_down_proj",
+      "rank": 0
+    },
+    {
+      "task_id": 31,
+      "kernel_group_id": 31,
+      "name": "layer_6_qkv",
+      "rank": 0
+    },
+    {
+      "task_id": 32,
+      "kernel_group_id": 32,
+      "name": "layer_6_sdpa",
+      "rank": 1
+    },
+    {
+      "task_id": 33,
+      "kernel_group_id": 33,
+      "name": "layer_6_o_proj",
+      "rank": 0
+    },
+    {
+      "task_id": 34,
+      "kernel_group_id": 34,
+      "name": "layer_6_mlp_gate_up",
+      "rank": 1
+    },
+    {
+      "task_id": 35,
+      "kernel_group_id": 35,
+      "name": "layer_6_mlp_down_proj",
+      "rank": 0
+    },
+    {
+      "task_id": 36,
+      "kernel_group_id": 36,
+      "name": "layer_7_qkv",
+      "rank": 0
+    },
+    {
+      "task_id": 37,
+      "kernel_group_id": 37,
+      "name": "layer_7_sdpa",
+      "rank": 1
+    },
+    {
+      "task_id": 38,
+      "kernel_group_id": 38,
+      "name": "layer_7_o_proj",
+      "rank": 0
+    },
+    {
+      "task_id": 39,
+      "kernel_group_id": 39,
+      "name": "layer_7_mlp_gate_up",
+      "rank": 1
+    },
+    {
+      "task_id": 40,
+      "kernel_group_id": 40,
+      "name": "layer_7_mlp_down_proj",
+      "rank": 0
+    },
+    {
+      "task_id": 41,
+      "kernel_group_id": 41,
+      "name": "layer_8_qkv",
+      "rank": 0
+    },
+    {
+      "task_id": 42,
+      "kernel_group_id": 42,
+      "name": "layer_8_sdpa",
+      "rank": 1
+    },
+    {
+      "task_id": 43,
+      "kernel_group_id": 43,
+      "name": "layer_8_o_proj",
+      "rank": 0
+    },
+    {
+      "task_id": 44,
+      "kernel_group_id": 44,
+      "name": "layer_8_mlp_gate_up",
+      "rank": 1
+    },
+    {
+      "task_id": 45,
+      "kernel_group_id": 45,
+      "name": "layer_8_mlp_down_proj",
+      "rank": 0
+    },
+    {
+      "task_id": 46,
+      "kernel_group_id": 46,
+      "name": "layer_9_qkv",
+      "rank": 0
+    },
+    {
+      "task_id": 47,
+      "kernel_group_id": 47,
+      "name": "layer_9_sdpa",
+      "rank": 1
+    },
+    {
+      "task_id": 48,
+      "kernel_group_id": 48,
+      "name": "layer_9_o_proj",
+      "rank": 0
+    },
+    {
+      "task_id": 49,
+      "kernel_group_id": 49,
+      "name": "layer_9_mlp_gate_up",
+      "rank": 1
+    },
+    {
+      "task_id": 50,
+      "kernel_group_id": 50,
+      "name": "layer_9_mlp_down_proj",
+      "rank": 0
+    },
+    {
+      "task_id": 51,
+      "kernel_group_id": 51,
+      "name": "layer_10_qkv",
+      "rank": 0
+    },
+    {
+      "task_id": 52,
+      "kernel_group_id": 52,
+      "name": "layer_10_sdpa",
+      "rank": 1
+    },
+    {
+      "task_id": 53,
+      "kernel_group_id": 53,
+      "name": "layer_10_o_proj",
+      "rank": 0
+    },
+    {
+      "task_id": 54,
+      "kernel_group_id": 54,
+      "name": "layer_10_mlp_gate_up",
+      "rank": 1
+    },
+    {
+      "task_id": 55,
+      "kernel_group_id": 55,
+      "name": "layer_10_mlp_down_proj",
+      "rank": 0
+    },
+    {
+      "task_id": 56,
+      "kernel_group_id": 56,
+      "name": "layer_11_qkv",
+      "rank": 0
+    },
+    {
+      "task_id": 57,
+      "kernel_group_id": 57,
+      "name": "layer_11_sdpa",
+      "rank": 1
+    },
+    {
+      "task_id": 58,
+      "kernel_group_id": 58,
+      "name": "layer_11_o_proj",
+      "rank": 0
+    },
+    {
+      "task_id": 59,
+      "kernel_group_id": 59,
+      "name": "layer_11_mlp_gate_up",
+      "rank": 1
+    },
+    {
+      "task_id": 60,
+      "kernel_group_id": 60,
+      "name": "layer_11_mlp_down_proj",
+      "rank": 0
+    },
+    {
+      "task_id": 61,
+      "kernel_group_id": 61,
+      "name": "layer_12_qkv",
+      "rank": 0
+    },
+    {
+      "task_id": 62,
+      "kernel_group_id": 62,
+      "name": "layer_12_sdpa",
+      "rank": 1
+    },
+    {
+      "task_id": 63,
+      "kernel_group_id": 63,
+      "name": "layer_12_o_proj",
+      "rank": 0
+    },
+    {
+      "task_id": 64,
+      "kernel_group_id": 64,
+      "name": "layer_12_mlp_gate_up",
+      "rank": 1
+    },
+    {
+      "task_id": 65,
+      "kernel_group_id": 65,
+      "name": "layer_12_mlp_down_proj",
+      "rank": 0
+    },
+    {
+      "task_id": 66,
+      "kernel_group_id": 66,
+      "name": "layer_13_qkv",
+      "rank": 0
+    },
+    {
+      "task_id": 67,
+      "kernel_group_id": 67,
+      "name": "layer_13_sdpa",
+      "rank": 1
+    },
+    {
+      "task_id": 68,
+      "kernel_group_id": 68,
+      "name": "layer_13_o_proj",
+      "rank": 0
+    },
+    {
+      "task_id": 69,
+      "kernel_group_id": 69,
+      "name": "layer_13_mlp_gate_up",
+      "rank": 1
+    },
+    {
+      "task_id": 70,
+      "kernel_group_id": 70,
+      "name": "layer_13_mlp_down_proj",
+      "rank": 0
+    },
+    {
+      "task_id": 71,
+      "kernel_group_id": 71,
+      "name": "layer_14_qkv",
+      "rank": 0
+    },
+    {
+      "task_id": 72,
+      "kernel_group_id": 72,
+      "name": "layer_14_sdpa",
+      "rank": 1
+    },
+    {
+      "task_id": 73,
+      "kernel_group_id": 73,
+      "name": "layer_14_o_proj",
+      "rank": 0
+    },
+    {
+      "task_id": 74,
+      "kernel_group_id": 74,
+      "name": "layer_14_mlp_gate_up",
+      "rank": 1
+    },
+    {
+      "task_id": 75,
+      "kernel_group_id": 75,
+      "name": "layer_14_mlp_down_proj",
+      "rank": 0
+    },
+    {
+      "task_id": 76,
+      "kernel_group_id": 76,
+      "name": "layer_15_qkv",
+      "rank": 0
+    },
+    {
+      "task_id": 77,
+      "kernel_group_id": 77,
+      "name": "layer_15_sdpa",
+      "rank": 1
+    },
+    {
+      "task_id": 78,
+      "kernel_group_id": 78,
+      "name": "layer_15_o_proj",
+      "rank": 0
+    },
+    {
+      "task_id": 79,
+      "kernel_group_id": 79,
+      "name": "layer_15_mlp_gate_up",
+      "rank": 1
+    },
+    {
+      "task_id": 80,
+      "kernel_group_id": 80,
+      "name": "layer_15_mlp_down_proj",
+      "rank": 0
+    },
+    {
+      "task_id": 81,
+      "kernel_group_id": 81,
+      "name": "layer_16_qkv",
+      "rank": 0
+    },
+    {
+      "task_id": 82,
+      "kernel_group_id": 82,
+      "name": "layer_16_sdpa",
+      "rank": 1
+    },
+    {
+      "task_id": 83,
+      "kernel_group_id": 83,
+      "name": "layer_16_o_proj",
+      "rank": 0
+    },
+    {
+      "task_id": 84,
+      "kernel_group_id": 84,
+      "name": "layer_16_mlp_gate_up",
+      "rank": 1
+    },
+    {
+      "task_id": 85,
+      "kernel_group_id": 85,
+      "name": "layer_16_mlp_down_proj",
+      "rank": 0
+    },
+    {
+      "task_id": 86,
+      "kernel_group_id": 86,
+      "name": "layer_17_qkv",
+      "rank": 0
+    },
+    {
+      "task_id": 87,
+      "kernel_group_id": 87,
+      "name": "layer_17_sdpa",
+      "rank": 1
+    },
+    {
+      "task_id": 88,
+      "kernel_group_id": 88,
+      "name": "layer_17_o_proj",
+      "rank": 0
+    },
+    {
+      "task_id": 89,
+      "kernel_group_id": 89,
+      "name": "layer_17_mlp_gate_up",
+      "rank": 1
+    },
+    {
+      "task_id": 90,
+      "kernel_group_id": 90,
+      "name": "layer_17_mlp_down_proj",
+      "rank": 0
+    },
+    {
+      "task_id": 91,
+      "kernel_group_id": 91,
+      "name": "layer_18_qkv",
+      "rank": 0
+    },
+    {
+      "task_id": 92,
+      "kernel_group_id": 92,
+      "name": "layer_18_sdpa",
+      "rank": 1
+    },
+    {
+      "task_id": 93,
+      "kernel_group_id": 93,
+      "name": "layer_18_o_proj",
+      "rank": 0
+    },
+    {
+      "task_id": 94,
+      "kernel_group_id": 94,
+      "name": "layer_18_mlp_gate_up",
+      "rank": 1
+    },
+    {
+      "task_id": 95,
+      "kernel_group_id": 95,
+      "name": "layer_18_mlp_down_proj",
+      "rank": 0
+    },
+    {
+      "task_id": 96,
+      "kernel_group_id": 96,
+      "name": "layer_19_qkv",
+      "rank": 0
+    },
+    {
+      "task_id": 97,
+      "kernel_group_id": 97,
+      "name": "layer_19_sdpa",
+      "rank": 1
+    },
+    {
+      "task_id": 98,
+      "kernel_group_id": 98,
+      "name": "layer_19_o_proj",
+      "rank": 0
+    },
+    {
+      "task_id": 99,
+      "kernel_group_id": 99,
+      "name": "layer_19_mlp_gate_up",
+      "rank": 1
+    },
+    {
+      "task_id": 100,
+      "kernel_group_id": 100,
+      "name": "layer_19_mlp_down_proj",
+      "rank": 0
+    },
+    {
+      "task_id": 101,
+      "kernel_group_id": 101,
+      "name": "layer_20_qkv",
+      "rank": 0
+    },
+    {
+      "task_id": 102,
+      "kernel_group_id": 102,
+      "name": "layer_20_sdpa",
+      "rank": 1
+    },
+    {
+      "task_id": 103,
+      "kernel_group_id": 103,
+      "name": "layer_20_o_proj",
+      "rank": 0
+    },
+    {
+      "task_id": 104,
+      "kernel_group_id": 104,
+      "name": "layer_20_mlp_gate_up",
+      "rank": 1
+    },
+    {
+      "task_id": 105,
+      "kernel_group_id": 105,
+      "name": "layer_20_mlp_down_proj",
+      "rank": 0
+    },
+    {
+      "task_id": 106,
+      "kernel_group_id": 106,
+      "name": "layer_21_qkv",
+      "rank": 0
+    },
+    {
+      "task_id": 107,
+      "kernel_group_id": 107,
+      "name": "layer_21_sdpa",
+      "rank": 1
+    },
+    {
+      "task_id": 108,
+      "kernel_group_id": 108,
+      "name": "layer_21_o_proj",
+      "rank": 0
+    },
+    {
+      "task_id": 109,
+      "kernel_group_id": 109,
+      "name": "layer_21_mlp_gate_up",
+      "rank": 1
+    },
+    {
+      "task_id": 110,
+      "kernel_group_id": 110,
+      "name": "layer_21_mlp_down_proj",
+      "rank": 0
+    },
+    {
+      "task_id": 111,
+      "kernel_group_id": 111,
+      "name": "layer_22_qkv",
+      "rank": 0
+    },
+    {
+      "task_id": 112,
+      "kernel_group_id": 112,
+      "name": "layer_22_sdpa",
+      "rank": 1
+    },
+    {
+      "task_id": 113,
+      "kernel_group_id": 113,
+      "name": "layer_22_o_proj",
+      "rank": 0
+    },
+    {
+      "task_id": 114,
+      "kernel_group_id": 114,
+      "name": "layer_22_mlp_gate_up",
+      "rank": 1
+    },
+    {
+      "task_id": 115,
+      "kernel_group_id": 115,
+      "name": "layer_22_mlp_down_proj",
+      "rank": 0
+    },
+    {
+      "task_id": 116,
+      "kernel_group_id": 116,
+      "name": "layer_23_qkv",
+      "rank": 0
+    },
+    {
+      "task_id": 117,
+      "kernel_group_id": 117,
+      "name": "layer_23_sdpa",
+      "rank": 1
+    },
+    {
+      "task_id": 118,
+      "kernel_group_id": 118,
+      "name": "layer_23_o_proj",
+      "rank": 0
+    },
+    {
+      "task_id": 119,
+      "kernel_group_id": 119,
+      "name": "layer_23_mlp_gate_up",
+      "rank": 1
+    },
+    {
+      "task_id": 120,
+      "kernel_group_id": 120,
+      "name": "layer_23_mlp_down_proj",
+      "rank": 0
+    },
+    {
+      "task_id": 121,
+      "kernel_group_id": 121,
+      "name": "layer_24_qkv",
+      "rank": 0
+    },
+    {
+      "task_id": 122,
+      "kernel_group_id": 122,
+      "name": "layer_24_sdpa",
+      "rank": 1
+    },
+    {
+      "task_id": 123,
+      "kernel_group_id": 123,
+      "name": "layer_24_o_proj",
+      "rank": 0
+    },
+    {
+      "task_id": 124,
+      "kernel_group_id": 124,
+      "name": "layer_24_mlp_gate_up",
+      "rank": 1
+    },
+    {
+      "task_id": 125,
+      "kernel_group_id": 125,
+      "name": "layer_24_mlp_down_proj",
+      "rank": 0
+    },
+    {
+      "task_id": 126,
+      "kernel_group_id": 126,
+      "name": "layer_25_qkv",
+      "rank": 0
+    },
+    {
+      "task_id": 127,
+      "kernel_group_id": 127,
+      "name": "layer_25_sdpa",
+      "rank": 1
+    },
+    {
+      "task_id": 128,
+      "kernel_group_id": 128,
+      "name": "layer_25_o_proj",
+      "rank": 0
+    },
+    {
+      "task_id": 129,
+      "kernel_group_id": 129,
+      "name": "layer_25_mlp_gate_up",
+      "rank": 1
+    },
+    {
+      "task_id": 130,
+      "kernel_group_id": 130,
+      "name": "layer_25_mlp_down_proj",
+      "rank": 0
+    },
+    {
+      "task_id": 131,
+      "kernel_group_id": 131,
+      "name": "layer_26_qkv",
+      "rank": 0
+    },
+    {
+      "task_id": 132,
+      "kernel_group_id": 132,
+      "name": "layer_26_sdpa",
+      "rank": 1
+    },
+    {
+      "task_id": 133,
+      "kernel_group_id": 133,
+      "name": "layer_26_o_proj",
+      "rank": 0
+    },
+    {
+      "task_id": 134,
+      "kernel_group_id": 134,
+      "name": "layer_26_mlp_gate_up",
+      "rank": 1
+    },
+    {
+      "task_id": 135,
+      "kernel_group_id": 135,
+      "name": "layer_26_mlp_down_proj",
+      "rank": 0
+    },
+    {
+      "task_id": 136,
+      "kernel_group_id": 136,
+      "name": "layer_27_qkv",
+      "rank": 0
+    },
+    {
+      "task_id": 137,
+      "kernel_group_id": 137,
+      "name": "layer_27_sdpa",
+      "rank": 1
+    },
+    {
+      "task_id": 138,
+      "kernel_group_id": 138,
+      "name": "layer_27_o_proj",
+      "rank": 0
+    },
+    {
+      "task_id": 139,
+      "kernel_group_id": 139,
+      "name": "layer_27_mlp_gate_up",
+      "rank": 1
+    },
+    {
+      "task_id": 140,
+      "kernel_group_id": 140,
+      "name": "layer_27_mlp_down_proj",
+      "rank": 0
+    },
+    {
+      "task_id": 141,
+      "kernel_group_id": 141,
+      "name": "norm_lm_head",
+      "rank": 0
+    }
+  ]
+}

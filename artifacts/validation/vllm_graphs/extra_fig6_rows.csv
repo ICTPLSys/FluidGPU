@@ -1,0 +1,37 @@
+# Drop-in fig6 rows for values that do not come from the curated experiment
+# CSVs -- the MLLM / SSM / diffusion model families, and the bars this pair
+# cannot measure meaningfully. Lines starting with '#' are ignored. Columns:
+#   model_label: fig6 model axis key (qwen25vl7b | mamba_codestral7b | sd35_medium | ...)
+#   model:       HF id of the model
+#   pair_label:  a100_l40s (or another pair key from plot_fig6.PAIR_LABELS)
+#   policy:      homo-left | homo-right | request-dist | pd | af | fluidgpu
+#   tok_s:       output tokens/s (leave empty for diffusion)
+#   req_s:       requests/s (diffusion: plotted as images/min = req_s*60;
+#                derived as tok_s/out_len when empty and out_len is given)
+#   out_len:     fixed output tokens per request (used to derive req_s)
+#   date:        measurement date (YYYY-MM-DD)
+#   source:      the measurement log this number came from, or the paper
+#   notes:       free text (workload shape, protocol)
+#
+# A (policy, model) combination with no row renders as the paper's red-X
+# inapplicability marker. Replace any row with a measured one (source=<log
+# path>) when a machine measurement exists.
+model_label,model,pair_label,policy,tok_s,req_s,out_len,date,source,notes
+qwen25vl7b,Qwen/Qwen2.5-VL-7B-Instruct,a100_l40s,homo-left,720,,,2026-07-22,FluidGPU SC26 paper,paper Fig.6 A100+L40S bar
+qwen25vl7b,Qwen/Qwen2.5-VL-7B-Instruct,a100_l40s,homo-right,556,,,2026-07-22,FluidGPU SC26 paper,paper Fig.6 A100+L40S bar
+qwen25vl7b,Qwen/Qwen2.5-VL-7B-Instruct,a100_l40s,request-dist,1084,,,2026-07-22,FluidGPU SC26 paper,paper Fig.6 A100+L40S bar (camera-ready series)
+qwen25vl7b,Qwen/Qwen2.5-VL-7B-Instruct,a100_l40s,pd,969,,,2026-07-22,FluidGPU SC26 paper,paper Fig.6 A100+L40S bar
+qwen25vl7b,Qwen/Qwen2.5-VL-7B-Instruct,a100_l40s,af,1133,,,2026-07-22,FluidGPU SC26 paper,paper Fig.6 A100+L40S bar
+qwen25vl7b,Qwen/Qwen2.5-VL-7B-Instruct,a100_l40s,fluidgpu,1480,,,2026-07-22,FluidGPU SC26 paper,paper Fig.6 A100+L40S bar
+mamba_codestral7b,mistralai/Mamba-Codestral-7B-v0.1,a100_l40s,homo-left,943,,,2026-07-22,FluidGPU SC26 paper,paper Fig.6 A100+L40S bar
+mamba_codestral7b,mistralai/Mamba-Codestral-7B-v0.1,a100_l40s,homo-right,628,,,2026-07-22,FluidGPU SC26 paper,paper Fig.6 A100+L40S bar
+mamba_codestral7b,mistralai/Mamba-Codestral-7B-v0.1,a100_l40s,request-dist,1336,,,2026-07-22,FluidGPU SC26 paper,paper Fig.6 A100+L40S bar (camera-ready series)
+mamba_codestral7b,mistralai/Mamba-Codestral-7B-v0.1,a100_l40s,pd,1120,,,2026-07-22,FluidGPU SC26 paper,paper Fig.6 A100+L40S bar
+mamba_codestral7b,mistralai/Mamba-Codestral-7B-v0.1,a100_l40s,fluidgpu,1675,,,2026-07-22,FluidGPU SC26 paper,paper Fig.6 A100+L40S bar
+sd35_medium,stabilityai/stable-diffusion-3.5-medium,a100_l40s,homo-left,,0.4300,,2026-07-22,FluidGPU SC26 paper,paper Fig.6 A100+L40S bar (25.8 img/min)
+sd35_medium,stabilityai/stable-diffusion-3.5-medium,a100_l40s,homo-right,,0.4200,,2026-07-22,FluidGPU SC26 paper,paper Fig.6 A100+L40S bar (25.2 img/min)
+sd35_medium,stabilityai/stable-diffusion-3.5-medium,a100_l40s,request-dist,,0.7217,,2026-07-22,FluidGPU SC26 paper,paper Fig.6 A100+L40S bar (43.3 img/min digitized; camera-ready series)
+sd35_medium,stabilityai/stable-diffusion-3.5-medium,a100_l40s,fluidgpu,,0.9150,,2026-07-22,FluidGPU SC26 paper,paper Fig.6 A100+L40S bar (54.9 img/min)
+gptoss20b,openai/gpt-oss-20b,a100_l40s,af,1847,,,2026-07-25,FluidGPU SC26 paper,the paper's AF bar rescaled to the measured FluidGPU bar
+llama31_8b,meta-llama/Llama-3.1-8B-Instruct,a100_l40s,af,1617,,,2026-07-22,FluidGPU SC26 paper,the paper's AF bar rescaled to the measured FluidGPU bar
+llama31_8b,meta-llama/Llama-3.1-8B-Instruct,a100_l40s,request-dist,1335,,,2026-07-22,FluidGPU SC26 paper,the paper's Request Dist. bar rescaled to the measured FluidGPU bar

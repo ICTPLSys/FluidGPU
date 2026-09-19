@@ -1,0 +1,13 @@
+{
+  "figure": "fig7",
+  "run_id": "h100_rtxpro6000_fluidgpu_r48p60_paperref",
+  "kind": "imported-paper-reference",
+  "command": "python3 scripts/preprocess/ingest_paper_reference_figs.py",
+  "source": "FluidGPU SC26 paper",
+  "payload": {
+    "policy": "fluidgpu",
+    "rps": 48.6,
+    "model": "openai/gpt-oss-20b",
+    "pair_label": "h100_rtxpro6000"
+  }
+}

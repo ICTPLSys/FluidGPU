@@ -1,0 +1,13 @@
+figure: fig11
+title: Online monitor W and beta sensitivity
+artifact_root: artifacts/logs
+runs:
+  - id: monitor_grid
+    id_template: window_{window_ms}_beta_{beta}
+    kind: command
+    model: openai/gpt-oss-20b
+    requires_gpus: [A100, L40S]
+    command_template: bash scripts/run_fig11_monitor_sensitivity_fluidgpu.sh --model openai/gpt-oss-20b --monitor-window-ms {window_ms} --monitor-beta {beta}
+    matrix:
+      window_ms: [30, 90, 150, 300, 600, 1500]
+      beta: [1.1, 1.3, 1.5, 2.0, 3.0]

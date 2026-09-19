@@ -1,0 +1,14 @@
+constant,value,unit,source
+a100_prefill_native,68.6,us/token,e_pf_a100 out8 probe (decode-corrected)
+l40s_prefill_native,77.7,us/token,e_pf_l40s out8 probe
+a100_decode_step_bs32,19.0,ms,untraced homo arithmetic (traced 20.1-20.3)
+l40s_decode_step_bs32,35.2,ms,L40S homo arithmetic
+a100_decode_ceiling,1684,tok/s,32 rows / 19.0ms
+l40s_decode_ceiling,909,tok/s,32 rows / 35.2ms
+hop_bandwidth,23.06,GB/s,STAGE_TIMING hop_in (25.0GB/1084.8ms)
+l40s_remote_ffn,1.81,us/token/layer,STAGE_TIMING ffn_tok_s 553k
+leverA_prefill_pipelined,60.5,us/token,STEP_TRACE 8192-token steps
+homoW_prefill_workerized_local,95.0,us/token,STEP_TRACE threshold=inf control
+overlap_efficiency,96,percent,(serial 116 - measured 60.5)/(116 - ideal 58)
+census_prefill_ratio_l40s_a100,0.97,ratio,census 134.7/139.1 ms @1536
+census_decode_mlp_ratio,1.57,ratio,census bs1 18593/11815 us

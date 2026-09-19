@@ -1,0 +1,7 @@
+{
+  "status": "ok",
+  "norm_latency_ms_per_token": 16.27,
+  "paper_latency_ratio": 1.15,
+  "homo_a100_norm_latency_ms_tok": 16.7,
+  "measured_ms_per_token": null
+}

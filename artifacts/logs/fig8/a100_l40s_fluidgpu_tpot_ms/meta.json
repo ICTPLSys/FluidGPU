@@ -1,0 +1,14 @@
+{
+  "figure": "fig8",
+  "run_id": "a100_l40s_fluidgpu_tpot_ms",
+  "kind": "imported-paper-reference",
+  "command": "python3 scripts/preprocess/ingest_paper_reference_figs.py",
+  "source": "artifacts/validation/vllm_graphs/fig7_gt_v2/fg_leverA_r2.json",
+  "payload": {
+    "policy": "fluidgpu",
+    "metric": "tpot_ms",
+    "model": "openai/gpt-oss-20b",
+    "pair_label": "a100_l40s",
+    "request_rate": 2
+  }
+}

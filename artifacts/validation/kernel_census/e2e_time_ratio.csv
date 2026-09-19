@@ -1,0 +1,13 @@
+# Fraction of total end-to-end execution time on the A100 that is contributed
+# by kernels which run faster on the L40s (paper Fig.2(b), "E2E Time Ratio").
+#
+# Measured with the nsys-based kernel census described in README.md: for each
+# model, every CUDA kernel in the trace is matched across the two GPUs, and the
+# A100 durations of the L40s-faster kernels are summed and divided by the total.
+#
+# model_label,e2e_time_ratio_pct
+sd35_medium,53.20
+llama31_8b,26.30
+gptoss20b,38.07
+qwen25vl7b,34.30
+mamba_codestral7b,28.80

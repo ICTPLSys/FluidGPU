@@ -1,0 +1,12 @@
+{
+  "status": "ok",
+  "model": "~/.cache/fluidgpu/models/meta-llama--Llama-3.1-8B-Instruct",
+  "request_rate": Infinity,
+  "requests": 256,
+  "generated_tokens": 262144,
+  "elapsed_s": 189.26497492007914,
+  "throughput_req_s": 1.3526010298952622,
+  "throughput_tok_s": 1385.0634546127485,
+  "latency_ms_avg": null,
+  "source": "vllm bench serve"
+}

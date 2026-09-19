@@ -1,0 +1,14 @@
+{
+  "figure": "fig6",
+  "run_id": "gptoss20b_b200_h100_homo-left_paperref",
+  "kind": "imported-paper-reference",
+  "command": "python3 scripts/preprocess/ingest_paper_reference_figs.py",
+  "source": "FluidGPU SC26 paper",
+  "payload": {
+    "id": "gptoss20b_b200_h100_homo-left_paperref",
+    "model_label": "gptoss20b",
+    "model": "openai/gpt-oss-20b",
+    "policy": "homo-left",
+    "pair_label": "b200_h100"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "status": "ok",
+  "throughput_tok_s": null,
+  "throughput_req_s": 0.42,
+  "unit": "requests/s"
+}

@@ -1,0 +1,12 @@
+{
+  "status": "ok",
+  "throughput_tok_s": 1252.0,
+  "throughput_req_s": 1.8304093567251463,
+  "output_len": 684,
+  "steady_tok_s": 1252.0,
+  "unit": "output tokens/s (e2e = ok x out_len / wall)",
+  "paper_value": 1240.0,
+  "protocol": "rdma_driver 256req conc64 ms32",
+  "workload": "random-token 4096 in / 684 out (2026-07-24 final mirror)",
+  "source_row": "homo_a100"
+}

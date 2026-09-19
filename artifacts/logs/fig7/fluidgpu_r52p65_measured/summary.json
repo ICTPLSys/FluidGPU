@@ -1,0 +1,17 @@
+{
+  "status": "ok",
+  "request_rate": 52.65,
+  "normalized_latency_ms_per_token": 45.59,
+  "measured_request_rate": 5.027,
+  "rate_scale_vs_paper": 0.0955,
+  "sampling": "interpolated",
+  "swept_rates_req_s": [
+    2.0,
+    4.0,
+    6.0,
+    7.0,
+    8.0,
+    10.0,
+    12.0
+  ]
+}

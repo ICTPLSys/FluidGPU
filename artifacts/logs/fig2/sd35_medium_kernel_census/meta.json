@@ -1,0 +1,15 @@
+{
+  "figure": "fig2",
+  "run_id": "sd35_medium_kernel_census",
+  "kind": "kernel-census",
+  "command": "python3 scripts/preprocess/ingest_kernel_census.py",
+  "payload": {
+    "model_label": "sd35_medium",
+    "model": "stabilityai/stable-diffusion-3.5-medium",
+    "pair_label": "a100_l40s",
+    "requires_gpus": [
+      "A100",
+      "L40S"
+    ]
+  }
+}

@@ -1,0 +1,20 @@
+figure: fig2
+title: Kernel heterogeneity across model families
+artifact_root: artifacts/logs
+repeat: 1
+runs:
+  - id: kernel_profile_grid
+    id_template: "{model_label}_{gpu_label}_profile"
+    kind: command
+    requires_gpus: ["{gpu_label}"]
+    command_template: python3 fluidgpu_runtime/examples/fluidgpu_torch/profile_llm_kernels.py --model {model} --device-id {gpu_id} --output artifacts/logs/fig2/{model_label}_{gpu_label}_profile/profile.csv
+    matrix:
+      model_axis:
+        - {model_label: llama31_8b, model: meta-llama/Llama-3.1-8B-Instruct}
+        - {model_label: gptoss20b, model: openai/gpt-oss-20b}
+        - {model_label: qwen25vl7b, model: Qwen/Qwen2.5-VL-7B-Instruct}
+        - {model_label: mamba_codestral7b, model: mistralai/Mamba-Codestral-7B-v0.1}
+        - {model_label: sd35_medium, model: stabilityai/stable-diffusion-3.5-medium}
+      gpu_axis:
+        - {gpu_label: A100, gpu_id: 0}
+        - {gpu_label: L40S, gpu_id: 1}

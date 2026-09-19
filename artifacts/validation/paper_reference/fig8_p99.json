@@ -1,0 +1,24 @@
+{
+ "source": "FluidGPU SC26 paper",
+ "workload": "GPT-oss 20B, 16 req/s, A100+L40s",
+ "unit": {
+  "ttft_s": "seconds",
+  "tpot_ms": "milliseconds"
+ },
+ "values": {
+  "ttft_s": {
+   "homo-left": 329.94,
+   "homo-right": 403.474,
+   "pd": 182.695,
+   "af": 171.404,
+   "fluidgpu": 143.038
+  },
+  "tpot_ms": {
+   "homo-left": 11.41,
+   "homo-right": 19.75,
+   "pd": 10.38,
+   "af": 11.75,
+   "fluidgpu": 9.36
+  }
+ }
+}

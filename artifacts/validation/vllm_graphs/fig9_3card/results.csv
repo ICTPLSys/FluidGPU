@@ -1,0 +1,6 @@
+arm,e2e_tok_s,steady_tok_s,conc,date,notes
+fg2_reference,1898,2012,64,2026-07-16,P(L40S)+D1(A100#1)
+pd3_paper_config,1894,1990,128,2026-07-16,+D2(A100#0) round-robin; third card zero gain
+fg3_formA_phi035,2606,2949,96,2026-07-16,pair parallel homo(A100#0); FG-3/PD-3=1.376/1.482 (paper 1.424)
+fg3_formA_phi030,2602,2783,96,2026-07-16,
+fg3_formA_phi040,2328,2936,96,2026-07-16,e2e drain-tail collapse

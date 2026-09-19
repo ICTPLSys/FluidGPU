@@ -1,0 +1,14 @@
+layout,e2e_tok_s,steady_tok_s,model_ideal_tok_s,date,notes
+pure_af,931.2,,,2026-07-17,decode-hop poison -34%
+lever_a_ref,1415.3,,1475,2026-07-17,same-day 192req re-ref
+homo_a100,1416.9,,1435,2026-07-17,cal probe
+balanced_f020,1439.7,,,2026-07-17,parity 8/8
+balanced_f035,1472.1,,1502,2026-07-17,single-engine peak +4.0%
+balanced_f050,1461.6,,,2026-07-17,
+balanced_f065,1435.6,,,2026-07-17,
+pd_decoupled_conc64,1600,1651,1684,2026-07-17,A100 pure decode = 98% of ceiling
+hybrid_phi022,1950,2155,2159,2026-07-17,
+hybrid_phi028,1937,2174,2339,2026-07-17,steady peak at 1536 shape
+hybrid_phi034,1802,1892,2038,2026-07-17,
+dual_homo_conc4040,2032,,2239,2026-07-17,phi_req=0.367 n=162/94
+dual_homo_conc3232,2038,,2239,2026-07-17,strict conc parity

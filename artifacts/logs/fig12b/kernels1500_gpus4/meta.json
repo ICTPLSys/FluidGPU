@@ -1,0 +1,25 @@
+{
+  "figure": "fig12b",
+  "run_id": "kernels1500_gpus4",
+  "kind": "milp_planner",
+  "command": "python3 fluidgpu_runtime/examples/fluidgpu_torch/milp_planner_probe.py --kernels 1500 --gpus 4 --mode throughput --seed 0 --summary-json artifacts/logs/fig12b/kernels1500_gpus4/summary.json --solve-exact",
+  "payload": {
+    "id": "kernels1500_gpus4",
+    "id_template": "kernels{kernels}_gpus4",
+    "gpus": 4,
+    "kernels": 1500
+  },
+  "created_at": "2026-07-20T18:30:54.516214+00:00",
+  "environment": {
+    "host": "gpuserver86",
+    "platform": "Linux-5.15.0-185-generic-x86_64-with-glibc2.35",
+    "python": "3.12.13",
+    "gpus": [
+      "NVIDIA A100 80GB PCIe",
+      "NVIDIA A100 80GB PCIe",
+      "NVIDIA L40S"
+    ],
+    "git_commit": null
+  },
+  "environment_error": null
+}

@@ -1,0 +1,16 @@
+{
+ "source": "FluidGPU SC26 paper",
+ "unit": "output tokens/s",
+ "clusters": {
+  "two_a100_one_l40s_gptoss": {
+   "pd": 2987.0,
+   "af": 3144.0,
+   "fluidgpu": 4253.0
+  },
+  "eight_b200_eight_h100_qwen3": {
+   "pd": 4367.0,
+   "af": 4912.0,
+   "fluidgpu": 6799.0
+  }
+ }
+}

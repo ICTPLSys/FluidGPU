@@ -1,0 +1,126 @@
+{
+ "source": "FluidGPU SC26 paper",
+ "unit": {
+  "llm_ssm_mllm": "output tokens/s",
+  "sd35_medium": "images/min"
+ },
+ "pairs": {
+  "a100_l40s": {
+   "LM": {
+    "homo-left": 1288.3,
+    "homo-right": 893.63,
+    "request-dist": 1854.64,
+    "pd": 2064.82,
+    "af": 2246.26,
+    "fluidgpu": 2525.38
+   },
+   "GT": {
+    "homo-left": 1243.96,
+    "homo-right": 1016.33,
+    "request-dist": 2052.0,
+    "pd": 2050.11,
+    "af": 2204.27,
+    "fluidgpu": 2641.4
+   },
+   "QW": {
+    "homo-left": 719.58,
+    "homo-right": 555.61,
+    "request-dist": 1083.91,
+    "pd": 968.57,
+    "af": 1133.23,
+    "fluidgpu": 1479.54
+   },
+   "MB": {
+    "homo-left": 943.08,
+    "homo-right": 628.16,
+    "request-dist": 1064.08,
+    "pd": 1120.08,
+    "fluidgpu": 1675.34
+   },
+   "SD": {
+    "homo-left": 25.8,
+    "homo-right": 25.2,
+    "request-dist": 43.35,
+    "fluidgpu": 54.89
+   }
+  },
+  "h100_rtxpro6000": {
+   "LM": {
+    "homo-left": 2076.04,
+    "homo-right": 1664.63,
+    "request-dist": 3179.57,
+    "pd": 2908.36,
+    "af": 3106.82,
+    "fluidgpu": 4291.63
+   },
+   "GT": {
+    "homo-left": 2005.72,
+    "homo-right": 1874.07,
+    "request-dist": 2937.23,
+    "pd": 3091.82,
+    "af": 3156.56,
+    "fluidgpu": 4389.46
+   },
+   "QW": {
+    "homo-left": 1198.81,
+    "homo-right": 1042.33,
+    "request-dist": 1904.97,
+    "pd": 1657.17,
+    "af": 1778.17,
+    "fluidgpu": 2635.37
+   },
+   "MB": {
+    "homo-left": 1232.77,
+    "homo-right": 814.08,
+    "request-dist": 1586.43,
+    "pd": 1669.93,
+    "fluidgpu": 3881.48
+   },
+   "SD": {
+    "homo-left": 44.4,
+    "homo-right": 39.6,
+    "request-dist": 71.4,
+    "fluidgpu": 87.9
+   }
+  },
+  "b200_h100": {
+   "LM": {
+    "homo-left": 5637.41,
+    "homo-right": 2076.04,
+    "request-dist": 6556.43,
+    "pd": 6991.36,
+    "af": 7234.33,
+    "fluidgpu": 9188.98
+   },
+   "GT": {
+    "homo-left": 4947.16,
+    "homo-right": 2005.72,
+    "request-dist": 5094.87,
+    "pd": 5363.02,
+    "af": 5602.81,
+    "fluidgpu": 7272.33
+   },
+   "QW": {
+    "homo-left": 3496.15,
+    "homo-right": 1315.67,
+    "request-dist": 4090.05,
+    "pd": 3696.54,
+    "af": 3850.77,
+    "fluidgpu": 6502.84
+   },
+   "MB": {
+    "homo-left": 2634.09,
+    "homo-right": 1232.77,
+    "request-dist": 2680.41,
+    "pd": 2821.48,
+    "fluidgpu": 3950.66
+   },
+   "SD": {
+    "homo-left": 70.2,
+    "homo-right": 44.4,
+    "request-dist": 97.41,
+    "fluidgpu": 108.6
+   }
+  }
+ }
+}
