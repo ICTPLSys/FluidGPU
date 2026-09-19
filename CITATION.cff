@@ -10,7 +10,7 @@ abstract: >-
   (throughput-oriented MILP and latency-oriented), pipelined disaggregated
   execution with priority-aware stream scheduling, and a lightweight online
   monitor for dynamic policy adaptation. This repository is the artifact
-  accompanying the FluidGPU paper submitted to SC26.
+  accompanying the FluidGPU paper accepted at SC26.
 type: software
 authors:
   - name: "FluidGPU Authors (Anonymous for double-blind review)"
